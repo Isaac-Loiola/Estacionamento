@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Estacionamento.Class
 {
-    class Veiculo
+    public class Veiculo
     {
         int Id { get; set; }
         string Placa { get; set; }

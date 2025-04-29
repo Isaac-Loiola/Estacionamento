@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 
 namespace Estacionamento.Class
 {
-    public class Banco
+    public static class Banco
     {
         public static MySqlCommand Abrir()
         {
