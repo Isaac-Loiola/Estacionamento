@@ -39,7 +39,9 @@ namespace Estacionamento.Class
                               $"values('{Placa}', '{Modelo}', {TipoVeiculo})";
             cmd.ExecuteNonQuery();
 
-            Id = Convert.ToInt32(cmd.CommandText = "select last_insert_id() from veiculos");
+            cmd.CommandText = "select id from veiculos order by id desc limit 1";
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
+
         }
     }
 }

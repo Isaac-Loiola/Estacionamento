@@ -23,6 +23,19 @@ namespace Estacionamento.Class
             Situacao = situacao;
         }
 
+        public void RegistrarEntrada()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"insert into movimentacoes(id_veiculo, data_saida, situacao) " +
+                              $"values({IdVeiculo}, '{DataSaida}', 1)";
+            cmd.ExecuteNonQuery();
 
+            cmd.CommandText = "select id from movimentacoes order by id desc limit 1";
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
+
+            cmd.CommandText = "select data_entrada from movimentacoes order by id desc limit 1";
+            DataEntrada = Convert.ToDateTime(cmd.ExecuteScalar());
+        }
     }
 }
