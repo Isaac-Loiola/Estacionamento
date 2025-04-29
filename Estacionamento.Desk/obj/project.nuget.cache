@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HZQGs5Qo+3I=",
+  "dgSpecHash": "Cig3zFktrkc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Desk.csproj",
+  "projectFilePath": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Win.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ratoj\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "C:\\Users\\ratoj\\.nuget\\packages\\google.protobuf\\3.30.0\\google.protobuf.3.30.0.nupkg.sha512",

@@ -1633,9 +1633,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Desk.csproj",
-      "projectName": "Estacionamento.Desk",
-      "projectPath": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Desk.csproj",
+      "projectUniqueName": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Win.csproj",
+      "projectName": "Estacionamento.Win",
+      "projectPath": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Win.csproj",
       "packagesPath": "C:\\Users\\ratoj\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Desk\\obj\\",
       "projectStyle": "PackageReference",
