@@ -132,7 +132,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(204, 23);
             textBox1.TabIndex = 0;
-            textBox1.TextChanged += this.textBox1_TextChanged;
             // 
             // btnRegistrar
             // 
@@ -142,7 +141,7 @@
             btnRegistrar.TabIndex = 4;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
-            btnRegistrar.Click += this.btnRegistrar_Click;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // txtBuscar
             // 
