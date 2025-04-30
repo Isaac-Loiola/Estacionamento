@@ -27,6 +27,14 @@ namespace Estacionamento.Class
             TipoVeiculo = tipoVeiculo;
         }
 
+        public Veiculo(int id, string placa, string modelo, int tipoVeiculo)
+        {
+            Id = id;
+            Placa = placa;
+            Modelo = modelo;
+            TipoVeiculo = tipoVeiculo;
+        }
+
         //Adicionamento métodos
         /// <summary>
         /// Método registra um veiculo ao banco de dados!
@@ -43,5 +51,29 @@ namespace Estacionamento.Class
             Id = Convert.ToInt32(cmd.ExecuteScalar());
 
         }
+
+        public Veiculo BuscarPorPlaca(string placa)
+        {
+            Veiculo veiculo = new();
+
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select * from veiculos where placa = {placa}";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                veiculo = new
+                (
+                    Id = dr.GetInt32(0),
+                    Placa = dr.GetString(1),
+                    Modelo = dr.GetString(2),
+                    TipoVeiculo = dr.GetInt32(3) 
+                );
+            }
+
+            return veiculo;
+        }
+
+
     }
 }

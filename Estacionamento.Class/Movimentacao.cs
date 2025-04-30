@@ -37,5 +37,12 @@ namespace Estacionamento.Class
             cmd.CommandText = "select data_entrada from movimentacoes order by id desc limit 1";
             DataEntrada = Convert.ToDateTime(cmd.ExecuteScalar());
         }
+
+        public void RegistrarSaida(int idVeiculo)
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"update movimentacoes set data_saida = current_timestamp() and situacao = 0 where placa =  {idVeiculo}";
+        }
     }
 }

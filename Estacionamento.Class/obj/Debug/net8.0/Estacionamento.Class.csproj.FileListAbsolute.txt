@@ -1,0 +1,13 @@
+C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\bin\Debug\net8.0\Estacionamento.Class.deps.json
+C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\bin\Debug\net8.0\Estacionamento.Class.dll
+C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\bin\Debug\net8.0\Estacionamento.Class.pdb
+C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.csproj.AssemblyReference.cache
+C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.AssemblyInfoInputs.cache
+C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.AssemblyInfo.cs
+C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.csproj.CoreCompileInputs.cache
+C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.sourcelink.json
+C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.dll
+C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\refint\Estacionamento.Class.dll
+C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.pdb
+C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\ref\Estacionamento.Class.dll
