@@ -1,3 +1,5 @@
+using Estacionamento.Win;
+
 namespace Estacionamento.Desk
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace Estacionamento.Desk
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrmVeiculo());
+            Application.Run(new FrmEntradaSaida());
         }
     }
 }
