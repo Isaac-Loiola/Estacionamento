@@ -74,7 +74,7 @@ namespace Estacionamento.Class
             return veiculo;
         }
 
-        public List<Veiculo> ListarVeiculosEstacionados()
+        public static List<Veiculo> ListarVeiculosEstacionados()
         {
             var cmd = Banco.Abrir();
 

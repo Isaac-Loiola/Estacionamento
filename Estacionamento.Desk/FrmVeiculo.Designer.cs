@@ -28,30 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel3 = new Panel();
-            dataGridView1 = new DataGridView();
+            dgvVeiculos = new DataGridView();
+            clmPlaca = new DataGridViewTextBoxColumn();
+            clmModelo = new DataGridViewTextBoxColumn();
+            clmTipoVeiculo = new DataGridViewTextBoxColumn();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvVeiculos).BeginInit();
             SuspendLayout();
             // 
             // panel3
             // 
-            panel3.Controls.Add(dataGridView1);
-            panel3.Location = new Point(66, 110);
+            panel3.Controls.Add(dgvVeiculos);
+            panel3.Location = new Point(80, 108);
             panel3.Name = "panel3";
             panel3.Size = new Size(1005, 496);
             panel3.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgvVeiculos
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(25, 26);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(962, 453);
-            dataGridView1.TabIndex = 0;
+            dgvVeiculos.AllowUserToAddRows = false;
+            dgvVeiculos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter;
+            dgvVeiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgvVeiculos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvVeiculos.Columns.AddRange(new DataGridViewColumn[] { clmPlaca, clmModelo, clmTipoVeiculo });
+            dgvVeiculos.Location = new Point(25, 26);
+            dgvVeiculos.Name = "dgvVeiculos";
+            dgvVeiculos.ReadOnly = true;
+            dgvVeiculos.RowHeadersVisible = false;
+            dgvVeiculos.Size = new Size(962, 453);
+            dgvVeiculos.TabIndex = 0;
+            // 
+            // clmPlaca
+            // 
+            clmPlaca.HeaderText = "Placa";
+            clmPlaca.Name = "clmPlaca";
+            clmPlaca.ReadOnly = true;
+            clmPlaca.Width = 320;
+            // 
+            // clmModelo
+            // 
+            clmModelo.HeaderText = "Modelo";
+            clmModelo.Name = "clmModelo";
+            clmModelo.ReadOnly = true;
+            clmModelo.Width = 319;
+            // 
+            // clmTipoVeiculo
+            // 
+            clmTipoVeiculo.HeaderText = "Tipo";
+            clmTipoVeiculo.Name = "clmTipoVeiculo";
+            clmTipoVeiculo.ReadOnly = true;
+            clmTipoVeiculo.Width = 320;
             // 
             // FrmVeiculo
             // 
@@ -64,12 +93,15 @@
             Text = "CarsFast";
             Load += CarsFast_Load;
             panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvVeiculos).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private Panel panel3;
-        private DataGridView dataGridView1;
+        private DataGridView dgvVeiculos;
+        private DataGridViewTextBoxColumn clmPlaca;
+        private DataGridViewTextBoxColumn clmModelo;
+        private DataGridViewTextBoxColumn clmTipoVeiculo;
     }
 }
