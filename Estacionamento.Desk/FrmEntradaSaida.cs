@@ -22,6 +22,36 @@ namespace Estacionamento.Win
         {
             Veiculo veiculo = new(txtPlaca.Text, txtModelo.Text, cmbTipoVeiculo.SelectedIndex + 1);
             veiculo.Registrar();
+
+            Movimentacao movimentacao = new(veiculo.Id);
+            movimentacao.RegistrarEntrada();
+
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Veiculo veiculo = new();
+                var retorno = veiculo.BuscarPorPlaca(txtBuscar.Text);
+
+                txtPlacaSaida.Text = retorno.Placa;
+                txtModeloSaida.Text = retorno.Modelo;
+            }
         }
     }
 }

@@ -15,20 +15,23 @@ namespace Estacionamento.Class
         DateTime DataSaida { get; set; }
         int Situacao { get; set; }
 
+        public Movimentacao()
+        {
+
+        }
+
         // Construtor que será utilizado na hora do Insert
-        public Movimentacao(int idVeiculo, DateTime dataEntrada, DateTime dataSaida, int situacao)
+        public Movimentacao(int idVeiculo)
         {
             IdVeiculo = idVeiculo;
-            DataSaida = dataSaida;
-            Situacao = situacao;
         }
 
         public void RegistrarEntrada()
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"insert into movimentacoes(id_veiculo, data_saida, situacao) " +
-                              $"values({IdVeiculo}, '{DataSaida}', 1)";
+            cmd.CommandText = $"insert into movimentacoes(id_veiculo,  situacao) " +
+                              $"values({IdVeiculo}, 1)";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = "select id from movimentacoes order by id desc limit 1";

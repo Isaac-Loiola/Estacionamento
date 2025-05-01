@@ -36,8 +36,9 @@
             txtModelo = new TextBox();
             txtPlaca = new TextBox();
             panel2 = new Panel();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtDataEntrada = new TextBox();
+            txtModeloSaida = new TextBox();
+            txtPlacaSaida = new TextBox();
             btnRegistrar = new Button();
             txtBuscar = new TextBox();
             btnSaida = new Button();
@@ -112,26 +113,35 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(txtDataEntrada);
+            panel2.Controls.Add(txtModeloSaida);
+            panel2.Controls.Add(txtPlacaSaida);
             panel2.Location = new Point(570, 111);
             panel2.Name = "panel2";
             panel2.Size = new Size(539, 437);
             panel2.TabIndex = 1;
             // 
-            // textBox2
+            // txtDataEntrada
             // 
-            textBox2.Location = new Point(152, 190);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(257, 23);
-            textBox2.TabIndex = 1;
+            txtDataEntrada.Location = new Point(180, 283);
+            txtDataEntrada.Name = "txtDataEntrada";
+            txtDataEntrada.Size = new Size(204, 23);
+            txtDataEntrada.TabIndex = 2;
             // 
-            // textBox1
+            // txtModeloSaida
             // 
-            textBox1.Location = new Point(180, 108);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(204, 23);
-            textBox1.TabIndex = 0;
+            txtModeloSaida.Location = new Point(152, 190);
+            txtModeloSaida.Name = "txtModeloSaida";
+            txtModeloSaida.Size = new Size(257, 23);
+            txtModeloSaida.TabIndex = 1;
+            // 
+            // txtPlacaSaida
+            // 
+            txtPlacaSaida.Location = new Point(180, 108);
+            txtPlacaSaida.Name = "txtPlacaSaida";
+            txtPlacaSaida.Size = new Size(204, 23);
+            txtPlacaSaida.TabIndex = 0;
+            txtPlacaSaida.TextChanged += textBox1_TextChanged;
             // 
             // btnRegistrar
             // 
@@ -150,6 +160,9 @@
             txtBuscar.PlaceholderText = "Buscar";
             txtBuscar.Size = new Size(197, 23);
             txtBuscar.TabIndex = 5;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
+            txtBuscar.KeyDown += txtBuscar_KeyDown;
+            txtBuscar.KeyPress += txtBuscar_KeyPress;
             // 
             // btnSaida
             // 
@@ -192,8 +205,9 @@
         private TextBox txtPlaca;
         private Button btnRegistrar;
         private TextBox txtBuscar;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtModeloSaida;
+        private TextBox txtPlacaSaida;
         private Button btnSaida;
+        private TextBox txtDataEntrada;
     }
 }

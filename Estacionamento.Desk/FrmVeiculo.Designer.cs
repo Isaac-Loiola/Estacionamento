@@ -29,14 +29,29 @@
         private void InitializeComponent()
         {
             panel3 = new Panel();
+            dataGridView1 = new DataGridView();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel3
             // 
+            panel3.Controls.Add(dataGridView1);
             panel3.Location = new Point(66, 110);
             panel3.Name = "panel3";
             panel3.Size = new Size(1005, 496);
             panel3.TabIndex = 2;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(25, 26);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(962, 453);
+            dataGridView1.TabIndex = 0;
             // 
             // FrmVeiculo
             // 
@@ -48,10 +63,13 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CarsFast";
             Load += CarsFast_Load;
+            panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private Panel panel3;
+        private DataGridView dataGridView1;
     }
 }

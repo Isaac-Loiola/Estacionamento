@@ -9,10 +9,10 @@ namespace Estacionamento.Class
 {
     public class Veiculo
     {
-        int Id { get; set; }
-        string Placa { get; set; }
-        string Modelo { get; set; }
-        int TipoVeiculo { get; set; }
+        public int Id { get; set; }
+        public string Placa { get; set; }
+        public string Modelo { get; set; }
+        public int TipoVeiculo { get; set; }
 
         //Adicionando construtores que serão necessarios na hora do insert.
         public Veiculo()
@@ -43,7 +43,7 @@ namespace Estacionamento.Class
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"insert into veiculos(palaca, modelo, tipo_veiculo) " +
+            cmd.CommandText = $"insert into veiculos(placa, modelo, tipo_veiculo) " +
                               $"values('{Placa}', '{Modelo}', {TipoVeiculo})";
             cmd.ExecuteNonQuery();
 
@@ -58,7 +58,7 @@ namespace Estacionamento.Class
 
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"select * from veiculos where placa = {placa}";
+            cmd.CommandText = $"select * from veiculos where placa = '{placa}'";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
