@@ -74,6 +74,29 @@ namespace Estacionamento.Class
             return veiculo;
         }
 
+        public List<Veiculo> ListarVeiculosEstacionados()
+        {
+            var cmd = Banco.Abrir();
+
+            List<Veiculo> veiculos = new();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select placa, modelo, tipo_veiculo from veiculos v inner join movimentacoes m on v.id = m.id_veiculo where situacao = 1;";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                veiculos.Add
+                    (
+                        new
+                        (
+                            dr.GetString(0),
+                            dr.GetString(1),
+                            dr.GetInt32(2)
+                        )
+                    );
+            }
+
+            return veiculos;
+        }
 
     }
 }
