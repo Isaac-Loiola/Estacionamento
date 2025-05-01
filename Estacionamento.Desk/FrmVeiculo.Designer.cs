@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel3 = new Panel();
             dgvVeiculos = new DataGridView();
             clmPlaca = new DataGridViewTextBoxColumn();
             clmModelo = new DataGridViewTextBoxColumn();
             clmTipoVeiculo = new DataGridViewTextBoxColumn();
+            txtBuscar = new TextBox();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvVeiculos).BeginInit();
             SuspendLayout();
@@ -50,8 +51,8 @@
             // 
             dgvVeiculos.AllowUserToAddRows = false;
             dgvVeiculos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
-            dgvVeiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter;
+            dgvVeiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvVeiculos.BackgroundColor = Color.White;
             dgvVeiculos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvVeiculos.Columns.AddRange(new DataGridViewColumn[] { clmPlaca, clmModelo, clmTipoVeiculo });
@@ -83,11 +84,21 @@
             clmTipoVeiculo.ReadOnly = true;
             clmTipoVeiculo.Width = 320;
             // 
+            // txtBuscar
+            // 
+            txtBuscar.Location = new Point(851, 79);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new Size(234, 23);
+            txtBuscar.TabIndex = 3;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
+            txtBuscar.KeyDown += txtBuscar_KeyDown;
+            // 
             // FrmVeiculo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1163, 676);
+            Controls.Add(txtBuscar);
             Controls.Add(panel3);
             Name = "FrmVeiculo";
             StartPosition = FormStartPosition.CenterScreen;
@@ -96,6 +107,7 @@
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvVeiculos).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -104,5 +116,6 @@
         private DataGridViewTextBoxColumn clmPlaca;
         private DataGridViewTextBoxColumn clmModelo;
         private DataGridViewTextBoxColumn clmTipoVeiculo;
+        private TextBox txtBuscar;
     }
 }
