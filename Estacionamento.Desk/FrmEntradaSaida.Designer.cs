@@ -127,6 +127,7 @@
             txtDataEntrada.Name = "txtDataEntrada";
             txtDataEntrada.Size = new Size(204, 23);
             txtDataEntrada.TabIndex = 2;
+            txtDataEntrada.TextAlign = HorizontalAlignment.Center;
             // 
             // txtModeloSaida
             // 
@@ -134,6 +135,7 @@
             txtModeloSaida.Name = "txtModeloSaida";
             txtModeloSaida.Size = new Size(257, 23);
             txtModeloSaida.TabIndex = 1;
+            txtModeloSaida.TextAlign = HorizontalAlignment.Center;
             // 
             // txtPlacaSaida
             // 
@@ -141,6 +143,7 @@
             txtPlacaSaida.Name = "txtPlacaSaida";
             txtPlacaSaida.Size = new Size(204, 23);
             txtPlacaSaida.TabIndex = 0;
+            txtPlacaSaida.TextAlign = HorizontalAlignment.Center;
             txtPlacaSaida.TextChanged += textBox1_TextChanged;
             // 
             // btnRegistrar
@@ -184,7 +187,9 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "FrmEntradaSaida";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmEntradaSaida";
+            Load += FrmEntradaSaida_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

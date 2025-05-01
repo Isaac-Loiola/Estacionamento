@@ -47,5 +47,15 @@ namespace Estacionamento.Class
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.CommandText = $"update movimentacoes set data_saida = current_timestamp() and situacao = 0 where placa =  {idVeiculo}";
         }
+
+        public static string BuscarMovimentacaoIdVeiculo(int idVeiculo)
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select data_entrada from movimentacoes where id_veiculo = {idVeiculo}";
+            string dataEntrada = Convert.ToString(cmd.ExecuteScalar());
+
+            return dataEntrada;
+        }
     }
 }

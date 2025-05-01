@@ -51,7 +51,14 @@ namespace Estacionamento.Win
 
                 txtPlacaSaida.Text = retorno.Placa;
                 txtModeloSaida.Text = retorno.Modelo;
+
+                txtDataEntrada.Text = Movimentacao.BuscarMovimentacaoIdVeiculo(retorno.Id);
             }
+        }
+
+        private void FrmEntradaSaida_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
