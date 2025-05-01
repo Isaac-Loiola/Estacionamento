@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel3 = new Panel();
             dgvVeiculos = new DataGridView();
             clmPlaca = new DataGridViewTextBoxColumn();
@@ -50,8 +50,9 @@
             // 
             dgvVeiculos.AllowUserToAddRows = false;
             dgvVeiculos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter;
-            dgvVeiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            dgvVeiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvVeiculos.BackgroundColor = Color.White;
             dgvVeiculos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvVeiculos.Columns.AddRange(new DataGridViewColumn[] { clmPlaca, clmModelo, clmTipoVeiculo });
             dgvVeiculos.Location = new Point(25, 26);

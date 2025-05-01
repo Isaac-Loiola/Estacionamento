@@ -36,6 +36,8 @@
             txtModelo = new TextBox();
             txtPlaca = new TextBox();
             panel2 = new Panel();
+            txtBoxTeste = new TextBox();
+            txtIdVeiculo = new TextBox();
             txtDataEntrada = new TextBox();
             txtModeloSaida = new TextBox();
             txtPlacaSaida = new TextBox();
@@ -113,6 +115,8 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(txtBoxTeste);
+            panel2.Controls.Add(txtIdVeiculo);
             panel2.Controls.Add(txtDataEntrada);
             panel2.Controls.Add(txtModeloSaida);
             panel2.Controls.Add(txtPlacaSaida);
@@ -120,6 +124,22 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(539, 437);
             panel2.TabIndex = 1;
+            // 
+            // txtBoxTeste
+            // 
+            txtBoxTeste.Location = new Point(243, 356);
+            txtBoxTeste.Name = "txtBoxTeste";
+            txtBoxTeste.Size = new Size(100, 23);
+            txtBoxTeste.TabIndex = 4;
+            // 
+            // txtIdVeiculo
+            // 
+            txtIdVeiculo.BackColor = SystemColors.Control;
+            txtIdVeiculo.Location = new Point(519, 3);
+            txtIdVeiculo.Name = "txtIdVeiculo";
+            txtIdVeiculo.Size = new Size(17, 23);
+            txtIdVeiculo.TabIndex = 3;
+            txtIdVeiculo.Visible = false;
             // 
             // txtDataEntrada
             // 
@@ -175,6 +195,7 @@
             btnSaida.TabIndex = 6;
             btnSaida.Text = "Saída";
             btnSaida.UseVisualStyleBackColor = true;
+            btnSaida.Click += btnSaida_Click;
             // 
             // FrmEntradaSaida
             // 
@@ -214,5 +235,7 @@
         private TextBox txtPlacaSaida;
         private Button btnSaida;
         private TextBox txtDataEntrada;
+        private TextBox txtIdVeiculo;
+        private TextBox txtBoxTeste;
     }
 }

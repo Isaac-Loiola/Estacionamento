@@ -52,11 +52,23 @@ namespace Estacionamento.Win
                 txtPlacaSaida.Text = retorno.Placa;
                 txtModeloSaida.Text = retorno.Modelo;
 
+                txtIdVeiculo.Text = Convert.ToString((retorno.Id));
+
                 txtDataEntrada.Text = Movimentacao.BuscarMovimentacaoIdVeiculo(retorno.Id);
             }
         }
 
         private void FrmEntradaSaida_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btnSaida_Click(object sender, EventArgs e)
+        {
+            Movimentacao movimentacao = new();
+            movimentacao.RegistrarSaida(Convert.ToInt32(txtIdVeiculo.Text));
+        }
+
+        private void trintaminuts_Tick(object sender, EventArgs e)
         {
 
         }
