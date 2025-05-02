@@ -69,15 +69,20 @@ namespace Estacionamento.Win
 
             txtSaida.Text = Convert.ToString(horarioSaida);
 
-            DateTime horarioEntrada = Movimentacao.BuscarMovimentacaoIdVeiculo(Convert.ToInt32(txtIdVeiculo.Text));
+            DateTime diferencaEntradaSaida = Movimentacao.BuscarMovimentacaoIdVeiculo(Convert.ToInt32(txtIdVeiculo.Text));
 
-            var horarioCobranca = (horarioSaida - horarioEntrada) ;
+            // Subtraindo horario de entrada e saida para obter diferença de horario.
+            var horarioCobranca = (horarioSaida - diferencaEntradaSaida);
+
+            // Isolando o dia e hora do veiculo estacionado!
             string dia = horarioCobranca.ToString().Substring(0, 1);
             string hora = horarioCobranca.ToString().Substring(2,2);
 
-            MessageBox.Show($" R$:{(Convert.ToInt32(dia) * 24 * 5) + (Convert.ToInt32(hora) * 5)}");
-
+            // Variavel que multiplica horarios e entrega valor a ser pago.
+            int valorEstacionado = (Convert.ToInt32(dia) * 24 * 5) + (Convert.ToInt32(hora) * 5);
             
+            MessageBox.Show($"R$: {valorEstacionado}");
+
         }
 
         private void trintaminuts_Tick(object sender, EventArgs e)
