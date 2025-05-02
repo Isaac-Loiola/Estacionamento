@@ -96,6 +96,7 @@
             Controls.Add(panel1);
             Name = "FrmHistorico";
             Text = "FrmHistorico";
+            Load += FrmHistorico_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

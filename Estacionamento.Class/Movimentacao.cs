@@ -61,5 +61,30 @@ namespace Estacionamento.Class
 
             return dataEntrada;
         }
+
+        public static List<Object> ListaDoHistorico()
+        {
+            var cmd = Banco.Abrir();
+
+            List<Object> listaHistorico = new();
+
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select placa, modelo, situacao, data_entrada from  veiculos v  inner join  movimentacoes m on v.id = m.id_veiculo";
+            var dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                listaHistorico.Add
+                    (
+                        (
+                            dr.GetString(0),
+                            dr.GetString(1),
+                            dr.GetInt32(2),
+                            dr.GetDateTime(3)
+                        )
+                    );
+            }
+
+            return listaHistorico;
+        }
     }
 }

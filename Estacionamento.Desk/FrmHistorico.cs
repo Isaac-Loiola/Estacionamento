@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Estacionamento.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,16 @@ using System.Windows.Forms;
 
 namespace Estacionamento.Win
 {
-    public partial class FrmHistorico: Form
+    public partial class FrmHistorico : Form
     {
         public FrmHistorico()
         {
             InitializeComponent();
+        }
+
+        private void FrmHistorico_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
