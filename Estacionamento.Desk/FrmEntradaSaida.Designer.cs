@@ -252,6 +252,7 @@
             txtBuscar.PlaceholderText = "Buscar";
             txtBuscar.Size = new Size(197, 23);
             txtBuscar.TabIndex = 5;
+            txtBuscar.TextAlign = HorizontalAlignment.Center;
             txtBuscar.TextChanged += txtBuscar_TextChanged;
             txtBuscar.KeyDown += txtBuscar_KeyDown;
             txtBuscar.KeyPress += txtBuscar_KeyPress;
