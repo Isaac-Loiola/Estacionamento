@@ -36,20 +36,20 @@
             txtModelo = new TextBox();
             txtPlaca = new TextBox();
             panel2 = new Panel();
+            txtValor = new TextBox();
+            lblvalor = new Label();
+            lblDataSaida = new Label();
+            lblDataEntrada = new Label();
             txtSaida = new TextBox();
+            label2 = new Label();
             txtIdVeiculo = new TextBox();
+            label1 = new Label();
             txtDataEntrada = new TextBox();
             txtModeloSaida = new TextBox();
             txtPlacaSaida = new TextBox();
             btnRegistrar = new Button();
             txtBuscar = new TextBox();
             btnSaida = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            lblDataEntrada = new Label();
-            lblDataSaida = new Label();
-            lblvalor = new Label();
-            txtValor = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -137,13 +137,59 @@
             panel2.Size = new Size(539, 437);
             panel2.TabIndex = 1;
             // 
+            // txtValor
+            // 
+            txtValor.Enabled = false;
+            txtValor.Location = new Point(198, 402);
+            txtValor.Name = "txtValor";
+            txtValor.Size = new Size(134, 23);
+            txtValor.TabIndex = 14;
+            txtValor.TextAlign = HorizontalAlignment.Center;
+            // 
+            // lblvalor
+            // 
+            lblvalor.AutoSize = true;
+            lblvalor.Location = new Point(250, 384);
+            lblvalor.Name = "lblvalor";
+            lblvalor.Size = new Size(33, 15);
+            lblvalor.TabIndex = 13;
+            lblvalor.Text = "Valor";
+            // 
+            // lblDataSaida
+            // 
+            lblDataSaida.AutoSize = true;
+            lblDataSaida.Location = new Point(367, 239);
+            lblDataSaida.Name = "lblDataSaida";
+            lblDataSaida.Size = new Size(78, 15);
+            lblDataSaida.TabIndex = 12;
+            lblDataSaida.Text = "Data de Saída";
+            // 
+            // lblDataEntrada
+            // 
+            lblDataEntrada.AutoSize = true;
+            lblDataEntrada.Location = new Point(91, 239);
+            lblDataEntrada.Name = "lblDataEntrada";
+            lblDataEntrada.Size = new Size(90, 15);
+            lblDataEntrada.TabIndex = 11;
+            lblDataEntrada.Text = "Data de Entrada";
+            // 
             // txtSaida
             // 
+            txtSaida.Enabled = false;
             txtSaida.Location = new Point(303, 257);
             txtSaida.Name = "txtSaida";
             txtSaida.Size = new Size(204, 23);
             txtSaida.TabIndex = 4;
             txtSaida.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(244, 139);
+            label2.Name = "label2";
+            label2.Size = new Size(48, 15);
+            label2.TabIndex = 10;
+            label2.Text = "Modelo";
             // 
             // txtIdVeiculo
             // 
@@ -154,8 +200,18 @@
             txtIdVeiculo.TabIndex = 3;
             txtIdVeiculo.Visible = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(246, 31);
+            label1.Name = "label1";
+            label1.Size = new Size(35, 15);
+            label1.TabIndex = 9;
+            label1.Text = "Placa";
+            // 
             // txtDataEntrada
             // 
+            txtDataEntrada.Enabled = false;
             txtDataEntrada.Location = new Point(27, 257);
             txtDataEntrada.Name = "txtDataEntrada";
             txtDataEntrada.Size = new Size(204, 23);
@@ -191,7 +247,7 @@
             // 
             // txtBuscar
             // 
-            txtBuscar.Location = new Point(750, 82);
+            txtBuscar.Location = new Point(912, 85);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar";
             txtBuscar.Size = new Size(197, 23);
@@ -209,59 +265,6 @@
             btnSaida.Text = "Saída";
             btnSaida.UseVisualStyleBackColor = true;
             btnSaida.Click += btnSaida_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(246, 31);
-            label1.Name = "label1";
-            label1.Size = new Size(35, 15);
-            label1.TabIndex = 9;
-            label1.Text = "Placa";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(244, 139);
-            label2.Name = "label2";
-            label2.Size = new Size(48, 15);
-            label2.TabIndex = 10;
-            label2.Text = "Modelo";
-            // 
-            // lblDataEntrada
-            // 
-            lblDataEntrada.AutoSize = true;
-            lblDataEntrada.Location = new Point(91, 239);
-            lblDataEntrada.Name = "lblDataEntrada";
-            lblDataEntrada.Size = new Size(90, 15);
-            lblDataEntrada.TabIndex = 11;
-            lblDataEntrada.Text = "Data de Entrada";
-            // 
-            // lblDataSaida
-            // 
-            lblDataSaida.AutoSize = true;
-            lblDataSaida.Location = new Point(367, 239);
-            lblDataSaida.Name = "lblDataSaida";
-            lblDataSaida.Size = new Size(78, 15);
-            lblDataSaida.TabIndex = 12;
-            lblDataSaida.Text = "Data de Saída";
-            // 
-            // lblvalor
-            // 
-            lblvalor.AutoSize = true;
-            lblvalor.Location = new Point(250, 384);
-            lblvalor.Name = "lblvalor";
-            lblvalor.Size = new Size(33, 15);
-            lblvalor.TabIndex = 13;
-            lblvalor.Text = "Valor";
-            // 
-            // txtValor
-            // 
-            txtValor.Location = new Point(198, 402);
-            txtValor.Name = "txtValor";
-            txtValor.Size = new Size(134, 23);
-            txtValor.TabIndex = 14;
-            txtValor.TextAlign = HorizontalAlignment.Center;
             // 
             // FrmEntradaSaida
             // 
