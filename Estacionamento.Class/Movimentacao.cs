@@ -41,19 +41,23 @@ namespace Estacionamento.Class
             DataEntrada = Convert.ToDateTime(cmd.ExecuteScalar());
         }
 
-        public void RegistrarSaida(int idVeiculo)
+        public static DateTime RegistrarSaida(int idVeiculo)
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"update movimentacoes set data_saida = current_timestamp() and situacao = 0 where placa =  {idVeiculo}";
+            cmd.CommandText = $"update movimentacoes set data_saida = current_timestamp(), situacao = 0 where id_veiculo = 1";
+            cmd.ExecuteNonQuery();
+
+            cmd.CommandText = $"select data_saida from movimentacoes where id_veiculo = {idVeiculo}";
+            return Convert.ToDateTime(cmd.ExecuteScalar());
         }
 
-        public static string BuscarMovimentacaoIdVeiculo(int idVeiculo)
+        public static DateTime BuscarMovimentacaoIdVeiculo(int idVeiculo)
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.CommandText = $"select data_entrada from movimentacoes where id_veiculo = {idVeiculo}";
-            string dataEntrada = Convert.ToString(cmd.ExecuteScalar());
+            DateTime dataEntrada = Convert.ToDateTime(cmd.ExecuteScalar());
 
             return dataEntrada;
         }

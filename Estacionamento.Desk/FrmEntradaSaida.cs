@@ -54,7 +54,7 @@ namespace Estacionamento.Win
 
                 txtIdVeiculo.Text = Convert.ToString((retorno.Id));
 
-                txtDataEntrada.Text = Movimentacao.BuscarMovimentacaoIdVeiculo(retorno.Id);
+                txtDataEntrada.Text = Convert.ToString(Movimentacao.BuscarMovimentacaoIdVeiculo(retorno.Id));
             }
         }
 
@@ -64,13 +64,30 @@ namespace Estacionamento.Win
 
         private void btnSaida_Click(object sender, EventArgs e)
         {
-            Movimentacao movimentacao = new();
-            movimentacao.RegistrarSaida(Convert.ToInt32(txtIdVeiculo.Text));
+            
+            DateTime horarioSaida = Movimentacao.RegistrarSaida(Convert.ToInt32(txtIdVeiculo.Text));
+
+            txtSaida.Text = Convert.ToString(horarioSaida);
+
+            DateTime horarioEntrada = Movimentacao.BuscarMovimentacaoIdVeiculo(Convert.ToInt32(txtIdVeiculo.Text));
+
+            var horarioCobranca = (horarioSaida - horarioEntrada) ;
+            string dia = horarioCobranca.ToString().Substring(0, 1);
+            string hora = horarioCobranca.ToString().Substring(2,2);
+
+            MessageBox.Show($" R$:{(Convert.ToInt32(dia) * 24 * 5) + (Convert.ToInt32(hora) * 5)}");
+
+            
         }
 
         private void trintaminuts_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

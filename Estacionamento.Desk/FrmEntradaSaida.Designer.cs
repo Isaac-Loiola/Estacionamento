@@ -36,7 +36,7 @@
             txtModelo = new TextBox();
             txtPlaca = new TextBox();
             panel2 = new Panel();
-            txtBoxTeste = new TextBox();
+            txtSaida = new TextBox();
             txtIdVeiculo = new TextBox();
             txtDataEntrada = new TextBox();
             txtModeloSaida = new TextBox();
@@ -115,7 +115,7 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(txtBoxTeste);
+            panel2.Controls.Add(txtSaida);
             panel2.Controls.Add(txtIdVeiculo);
             panel2.Controls.Add(txtDataEntrada);
             panel2.Controls.Add(txtModeloSaida);
@@ -125,12 +125,12 @@
             panel2.Size = new Size(539, 437);
             panel2.TabIndex = 1;
             // 
-            // txtBoxTeste
+            // txtSaida
             // 
-            txtBoxTeste.Location = new Point(243, 356);
-            txtBoxTeste.Name = "txtBoxTeste";
-            txtBoxTeste.Size = new Size(100, 23);
-            txtBoxTeste.TabIndex = 4;
+            txtSaida.Location = new Point(180, 356);
+            txtSaida.Name = "txtSaida";
+            txtSaida.Size = new Size(204, 23);
+            txtSaida.TabIndex = 4;
             // 
             // txtIdVeiculo
             // 
@@ -236,6 +236,6 @@
         private Button btnSaida;
         private TextBox txtDataEntrada;
         private TextBox txtIdVeiculo;
-        private TextBox txtBoxTeste;
+        private TextBox txtSaida;
     }
 }
