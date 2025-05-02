@@ -20,7 +20,14 @@ namespace Estacionamento.Win
 
         private void FrmHistorico_Load(object sender, EventArgs e)
         {
+            int linha = 0;
+            var listaDehistorico = Movimentacao.ListaDeHistorico();
             
+            foreach(var historico in listaDehistorico)
+            {
+                dgvHistorico.Rows.Add();
+                dgvHistorico.Rows[linha].Cells[0].Value = 0;
+            }
         }
     }
 }

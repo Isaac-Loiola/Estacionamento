@@ -26,6 +26,16 @@ namespace Estacionamento.Class
             IdVeiculo = idVeiculo;
         }
 
+        public Movimentacao(int idVeiculo, DateTime dataEntrada, DateTime dataSaida, int situacao)
+        {
+            IdVeiculo = idVeiculo;
+            DataEntrada = dataEntrada;
+            DataSaida = dataSaida;
+            Situacao = situacao;
+           
+        }
+
+
         public void RegistrarEntrada()
         {
             var cmd = Banco.Abrir();
@@ -62,24 +72,24 @@ namespace Estacionamento.Class
             return dataEntrada;
         }
 
-        public static List<Object> ListaDoHistorico()
+        public static List<Movimentacao> ListaDeHistorico()
         {
             var cmd = Banco.Abrir();
 
-            List<Object> listaHistorico = new();
+            List<Movimentacao> listaHistorico = new();
 
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"select placa, modelo, situacao, data_entrada from  veiculos v  inner join  movimentacoes m on v.id = m.id_veiculo";
+            cmd.CommandText = $"select id_veiculo, data_entrada, data_saida, situacao from movimentacoes";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 listaHistorico.Add
                     (
-                        (
-                            dr.GetString(0),
-                            dr.GetString(1),
-                            dr.GetInt32(2),
-                            dr.GetDateTime(3)
+                        new(
+                            dr.GetInt32(0),
+                            dr.GetDateTime(1),
+                            dr.GetDateTime(2),
+                            dr.GetInt32(3)
                         )
                     );
             }
