@@ -44,6 +44,12 @@
             btnRegistrar = new Button();
             txtBuscar = new TextBox();
             btnSaida = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            lblDataEntrada = new Label();
+            lblDataSaida = new Label();
+            lblvalor = new Label();
+            txtValor = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -64,7 +70,7 @@
             // lblTipoVeiculo
             // 
             lblTipoVeiculo.AutoSize = true;
-            lblTipoVeiculo.Location = new Point(145, 265);
+            lblTipoVeiculo.Location = new Point(150, 309);
             lblTipoVeiculo.Name = "lblTipoVeiculo";
             lblTipoVeiculo.Size = new Size(89, 15);
             lblTipoVeiculo.TabIndex = 11;
@@ -73,7 +79,7 @@
             // lblModelo
             // 
             lblModelo.AutoSize = true;
-            lblModelo.Location = new Point(162, 172);
+            lblModelo.Location = new Point(168, 177);
             lblModelo.Name = "lblModelo";
             lblModelo.Size = new Size(48, 15);
             lblModelo.TabIndex = 10;
@@ -82,7 +88,7 @@
             // lblPlaca
             // 
             lblPlaca.AutoSize = true;
-            lblPlaca.Location = new Point(171, 90);
+            lblPlaca.Location = new Point(170, 50);
             lblPlaca.Name = "lblPlaca";
             lblPlaca.Size = new Size(35, 15);
             lblPlaca.TabIndex = 9;
@@ -92,22 +98,22 @@
             // 
             cmbTipoVeiculo.FormattingEnabled = true;
             cmbTipoVeiculo.Items.AddRange(new object[] { "Carro", "Moto" });
-            cmbTipoVeiculo.Location = new Point(88, 283);
+            cmbTipoVeiculo.Location = new Point(87, 327);
             cmbTipoVeiculo.Name = "cmbTipoVeiculo";
             cmbTipoVeiculo.Size = new Size(204, 23);
             cmbTipoVeiculo.TabIndex = 8;
             // 
             // txtModelo
             // 
-            txtModelo.Location = new Point(60, 190);
+            txtModelo.Location = new Point(87, 195);
             txtModelo.Name = "txtModelo";
-            txtModelo.Size = new Size(257, 23);
+            txtModelo.Size = new Size(204, 23);
             txtModelo.TabIndex = 7;
             txtModelo.TextAlign = HorizontalAlignment.Center;
             // 
             // txtPlaca
             // 
-            txtPlaca.Location = new Point(88, 108);
+            txtPlaca.Location = new Point(87, 68);
             txtPlaca.Name = "txtPlaca";
             txtPlaca.Size = new Size(204, 23);
             txtPlaca.TabIndex = 6;
@@ -115,8 +121,14 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(txtValor);
+            panel2.Controls.Add(lblvalor);
+            panel2.Controls.Add(lblDataSaida);
+            panel2.Controls.Add(lblDataEntrada);
             panel2.Controls.Add(txtSaida);
+            panel2.Controls.Add(label2);
             panel2.Controls.Add(txtIdVeiculo);
+            panel2.Controls.Add(label1);
             panel2.Controls.Add(txtDataEntrada);
             panel2.Controls.Add(txtModeloSaida);
             panel2.Controls.Add(txtPlacaSaida);
@@ -127,10 +139,11 @@
             // 
             // txtSaida
             // 
-            txtSaida.Location = new Point(180, 356);
+            txtSaida.Location = new Point(303, 257);
             txtSaida.Name = "txtSaida";
             txtSaida.Size = new Size(204, 23);
             txtSaida.TabIndex = 4;
+            txtSaida.TextAlign = HorizontalAlignment.Center;
             // 
             // txtIdVeiculo
             // 
@@ -143,7 +156,7 @@
             // 
             // txtDataEntrada
             // 
-            txtDataEntrada.Location = new Point(180, 283);
+            txtDataEntrada.Location = new Point(27, 257);
             txtDataEntrada.Name = "txtDataEntrada";
             txtDataEntrada.Size = new Size(204, 23);
             txtDataEntrada.TabIndex = 2;
@@ -151,15 +164,15 @@
             // 
             // txtModeloSaida
             // 
-            txtModeloSaida.Location = new Point(152, 190);
+            txtModeloSaida.Location = new Point(162, 157);
             txtModeloSaida.Name = "txtModeloSaida";
-            txtModeloSaida.Size = new Size(257, 23);
+            txtModeloSaida.Size = new Size(204, 23);
             txtModeloSaida.TabIndex = 1;
             txtModeloSaida.TextAlign = HorizontalAlignment.Center;
             // 
             // txtPlacaSaida
             // 
-            txtPlacaSaida.Location = new Point(180, 108);
+            txtPlacaSaida.Location = new Point(162, 49);
             txtPlacaSaida.Name = "txtPlacaSaida";
             txtPlacaSaida.Size = new Size(204, 23);
             txtPlacaSaida.TabIndex = 0;
@@ -168,7 +181,7 @@
             // 
             // btnRegistrar
             // 
-            btnRegistrar.Location = new Point(159, 554);
+            btnRegistrar.Location = new Point(168, 554);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(173, 50);
             btnRegistrar.TabIndex = 4;
@@ -189,13 +202,66 @@
             // 
             // btnSaida
             // 
-            btnSaida.Location = new Point(767, 554);
+            btnSaida.Location = new Point(750, 554);
             btnSaida.Name = "btnSaida";
             btnSaida.Size = new Size(173, 50);
             btnSaida.TabIndex = 6;
             btnSaida.Text = "Saída";
             btnSaida.UseVisualStyleBackColor = true;
             btnSaida.Click += btnSaida_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(246, 31);
+            label1.Name = "label1";
+            label1.Size = new Size(35, 15);
+            label1.TabIndex = 9;
+            label1.Text = "Placa";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(244, 139);
+            label2.Name = "label2";
+            label2.Size = new Size(48, 15);
+            label2.TabIndex = 10;
+            label2.Text = "Modelo";
+            // 
+            // lblDataEntrada
+            // 
+            lblDataEntrada.AutoSize = true;
+            lblDataEntrada.Location = new Point(91, 239);
+            lblDataEntrada.Name = "lblDataEntrada";
+            lblDataEntrada.Size = new Size(90, 15);
+            lblDataEntrada.TabIndex = 11;
+            lblDataEntrada.Text = "Data de Entrada";
+            // 
+            // lblDataSaida
+            // 
+            lblDataSaida.AutoSize = true;
+            lblDataSaida.Location = new Point(367, 239);
+            lblDataSaida.Name = "lblDataSaida";
+            lblDataSaida.Size = new Size(78, 15);
+            lblDataSaida.TabIndex = 12;
+            lblDataSaida.Text = "Data de Saída";
+            // 
+            // lblvalor
+            // 
+            lblvalor.AutoSize = true;
+            lblvalor.Location = new Point(250, 384);
+            lblvalor.Name = "lblvalor";
+            lblvalor.Size = new Size(33, 15);
+            lblvalor.TabIndex = 13;
+            lblvalor.Text = "Valor";
+            // 
+            // txtValor
+            // 
+            txtValor.Location = new Point(198, 402);
+            txtValor.Name = "txtValor";
+            txtValor.Size = new Size(134, 23);
+            txtValor.TabIndex = 14;
+            txtValor.TextAlign = HorizontalAlignment.Center;
             // 
             // FrmEntradaSaida
             // 
@@ -237,5 +303,11 @@
         private TextBox txtDataEntrada;
         private TextBox txtIdVeiculo;
         private TextBox txtSaida;
+        private Label label1;
+        private TextBox txtValor;
+        private Label lblvalor;
+        private Label lblDataSaida;
+        private Label lblDataEntrada;
+        private Label label2;
     }
 }
