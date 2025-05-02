@@ -9,11 +9,11 @@ namespace Estacionamento.Class
     public class Movimentacao
     {
 
-        int Id { get;set; }
-        int IdVeiculo { get; set; }
-        DateTime DataEntrada { get; set; }
-        DateTime DataSaida { get; set; }
-        int Situacao { get; set; }
+        public int Id { get;set; }
+        public int IdVeiculo { get; set; }
+        public DateTime DataEntrada { get; set; }
+        public DateTime DataSaida { get; set; }
+        public int Situacao { get; set; }
 
         public Movimentacao()
         {
