@@ -26,7 +26,11 @@ namespace Estacionamento.Win
             foreach(var historico in listaDehistorico)
             {
                 dgvHistorico.Rows.Add();
-                dgvHistorico.Rows[linha].Cells[0].Value = 0;
+                dgvHistorico.Rows[linha].Cells[0].Value = historico.IdVeiculo;
+                dgvHistorico.Rows[linha].Cells[1].Value = historico.DataEntrada;
+                dgvHistorico.Rows[linha].Cells[2].Value = historico.DataSaida;
+                dgvHistorico.Rows[linha].Cells[3].Value = historico.Situacao == 0? "Finalizado" : "Estacionado";
+
             }
         }
     }
