@@ -62,7 +62,7 @@
             // 
             // Column1
             // 
-            Column1.HeaderText = "Placa";
+            Column1.HeaderText = "ID";
             Column1.Name = "Column1";
             Column1.ReadOnly = true;
             Column1.Width = 250;

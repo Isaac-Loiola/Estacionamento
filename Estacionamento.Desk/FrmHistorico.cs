@@ -31,6 +31,7 @@ namespace Estacionamento.Win
                 dgvHistorico.Rows[linha].Cells[2].Value = historico.DataSaida;
                 dgvHistorico.Rows[linha].Cells[3].Value = historico.Situacao == 0? "Finalizado" : "Estacionado";
 
+                linha++;
             }
         }
     }
