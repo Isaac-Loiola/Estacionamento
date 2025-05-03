@@ -55,7 +55,7 @@ namespace Estacionamento.Class
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"update movimentacoes set data_saida = current_timestamp(), situacao = 0 where id_veiculo = 1";
+            cmd.CommandText = $"update movimentacoes set data_saida = current_timestamp(), situacao = 0 where id_veiculo = {idVeiculo}";
             cmd.ExecuteNonQuery();
 
             cmd.CommandText = $"select data_saida from movimentacoes where id_veiculo = {idVeiculo}";
