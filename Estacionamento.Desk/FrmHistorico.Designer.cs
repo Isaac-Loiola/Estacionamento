@@ -34,6 +34,7 @@
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvHistorico).BeginInit();
             SuspendLayout();
@@ -52,7 +53,7 @@
             dgvHistorico.AllowUserToDeleteRows = false;
             dgvHistorico.BackgroundColor = Color.White;
             dgvHistorico.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvHistorico.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
+            dgvHistorico.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
             dgvHistorico.Location = new Point(25, 26);
             dgvHistorico.Name = "dgvHistorico";
             dgvHistorico.ReadOnly = true;
@@ -65,18 +66,17 @@
             Column1.HeaderText = "ID";
             Column1.Name = "Column1";
             Column1.ReadOnly = true;
-            Column1.Width = 250;
             // 
             // Column2
             // 
-            Column2.HeaderText = "Modelo";
+            Column2.HeaderText = "Data de entrada";
             Column2.Name = "Column2";
             Column2.ReadOnly = true;
             Column2.Width = 250;
             // 
             // Column3
             // 
-            Column3.HeaderText = "Situação";
+            Column3.HeaderText = "Data de Saida";
             Column3.Name = "Column3";
             Column3.ReadOnly = true;
             Column3.Width = 209;
@@ -88,6 +88,13 @@
             Column4.ReadOnly = true;
             Column4.Width = 250;
             // 
+            // Column5
+            // 
+            Column5.HeaderText = "Valor";
+            Column5.Name = "Column5";
+            Column5.ReadOnly = true;
+            Column5.Width = 150;
+            // 
             // FrmHistorico
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -95,6 +102,7 @@
             ClientSize = new Size(1163, 676);
             Controls.Add(panel1);
             Name = "FrmHistorico";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmHistorico";
             Load += FrmHistorico_Load;
             panel1.ResumeLayout(false);
@@ -110,5 +118,6 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +15,7 @@ namespace Estacionamento.Class
         public DateTime DataEntrada { get; set; }
         public DateTime DataSaida { get; set; }
         public int Situacao { get; set; }
-
+        public double Valor { get; set; }
         public Movimentacao()
         {
 
@@ -26,12 +27,13 @@ namespace Estacionamento.Class
             IdVeiculo = idVeiculo;
         }
 
-        public Movimentacao(int idVeiculo, DateTime dataEntrada, DateTime dataSaida, int situacao)
+        public Movimentacao(int idVeiculo, DateTime dataEntrada, DateTime dataSaida, int situacao, double valor)
         {
             IdVeiculo = idVeiculo;
             DataEntrada = dataEntrada;
             DataSaida = dataSaida;
             Situacao = situacao;
+            Valor = valor;
            
         }
 
@@ -79,7 +81,7 @@ namespace Estacionamento.Class
             List<Movimentacao> listaHistorico = new();
 
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"select id_veiculo, data_entrada, data_saida, situacao from movimentacoes";
+            cmd.CommandText = $"select id_veiculo, data_entrada, data_saida, situacao, valor from movimentacoes";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -89,7 +91,8 @@ namespace Estacionamento.Class
                             dr.GetInt32(0),
                             dr.GetDateTime(1),
                             dr.GetDateTime(2),
-                            dr.GetInt32(3)
+                            dr.GetInt32(3),
+                            dr.GetDouble(4)
                         )
                     );
             }

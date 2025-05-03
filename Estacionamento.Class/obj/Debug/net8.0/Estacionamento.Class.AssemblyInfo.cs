@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Estacionamento.Class")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d75d47f4969d6aaeeba851b4efe798b7d09da33a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d13979450ce8b07a2822d2c85048c67fec76b09")]
 [assembly: System.Reflection.AssemblyProductAttribute("Estacionamento.Class")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Estacionamento.Class")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
