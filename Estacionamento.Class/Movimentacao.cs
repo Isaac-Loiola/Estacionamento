@@ -96,5 +96,13 @@ namespace Estacionamento.Class
 
             return listaHistorico;
         }
+
+        public static void RegistrarValor(int idVeiculo, double valor)
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"update movimentacoes set valor = {valor} where id_veiculo = {idVeiculo} ";
+            cmd.ExecuteNonQuery();
+        }
     }
 }

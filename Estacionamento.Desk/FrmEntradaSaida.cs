@@ -82,7 +82,7 @@ namespace Estacionamento.Win
             // ex: Veiculo que estacionou por horas: horas:minutos:segundos
             if(Convert.ToString(horarioCobranca).Length < 10)
             {
-                int horas = Convert.ToInt32(horarioCobranca.ToString().Substring(0, 2));
+                double horas = Convert.ToInt32(horarioCobranca.ToString().Substring(0, 2));
 
                 if(horas == 0)
                 {
@@ -92,8 +92,12 @@ namespace Estacionamento.Win
                 else
                 {
                     MessageBox.Show($"O veiculo pernaneceu estacionado por {horas} horas.");
-                    horas *= 5;
-                    txtValor.Text = $"R$: {horas},00";
+                    double valorEstacionado = horas * 5;
+
+                    Movimentacao.RegistrarValor(Convert.ToInt32(txtIdVeiculo.Text), valorEstacionado);
+
+                    txtValor.Text = $"R$: {valorEstacionado},00";
+
                 }
             }
             else
@@ -105,7 +109,7 @@ namespace Estacionamento.Win
                 int hora = Convert.ToInt32(horarioCobranca.ToString().Substring(2, 2));
 
                 // Variavel que multiplica horarios e entrega valor a ser pago. (R$: 5,00 / hora)
-                int valorEstacionado = (dia * 24 * 5) + (hora * 5);
+                double valorEstacionado = (dia * 24 * 5) + (hora * 5);
 
                 if (dia > 0)
                 {
@@ -117,6 +121,8 @@ namespace Estacionamento.Win
                 }
             
                 txtValor.Text = $"R$: {valorEstacionado},00";
+
+                Movimentacao.RegistrarValor(Convert.ToInt32(txtIdVeiculo.Text), valorEstacionado);
             }
             
             
