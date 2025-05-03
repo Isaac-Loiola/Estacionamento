@@ -1,4 +1,5 @@
 using Estacionamento.Class;
+using Estacionamento.Win;
 
 namespace Estacionamento.Desk
 {
@@ -43,7 +44,7 @@ namespace Estacionamento.Desk
 
         private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 Veiculo veiculo = new();
                 var veiculoDeBusca = veiculo.BuscarPorPlaca(txtBuscar.Text);
@@ -52,8 +53,27 @@ namespace Estacionamento.Desk
                 dgvVeiculos.Rows.Add();
                 dgvVeiculos.Rows[0].Cells[0].Value = veiculoDeBusca.Placa;
                 dgvVeiculos.Rows[0].Cells[1].Value = veiculoDeBusca.Modelo;
-                dgvVeiculos.Rows[0].Cells[2].Value = veiculoDeBusca.TipoVeiculo == 1? "Carro" : "Moto";
+                dgvVeiculos.Rows[0].Cells[2].Value = veiculoDeBusca.TipoVeiculo == 1 ? "Carro" : "Moto";
             }
+        }
+
+        private void txtBuscar_KeyDown_1(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void btnEntradaSaida_Click(object sender, EventArgs e)
+        {
+            FrmEntradaSaida frmEntradaSaida = new();
+            frmEntradaSaida.Show();
+            this.Hide();
+        }
+
+        private void btnHistorico_Click(object sender, EventArgs e)
+        {
+            FrmHistorico frmHistorico = new();
+            frmHistorico.Show();
+            this.Hide();
         }
     }
 }

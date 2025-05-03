@@ -1,4 +1,5 @@
 ﻿using Estacionamento.Class;
+using Estacionamento.Desk;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,7 @@ namespace Estacionamento.Win
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Veiculo veiculo = new(txtPlaca.Text, txtModelo.Text, cmbTipoVeiculo.SelectedIndex + 1);
+            Veiculo veiculo = new(txtPlaca.Text, txtModelo.Text, this.cmbTipoVeiculo.SelectedIndex + 1);
             veiculo.Registrar();
 
             Movimentacao movimentacao = new(veiculo.Id);
@@ -68,7 +69,7 @@ namespace Estacionamento.Win
             DateTime horarioSaida = Movimentacao.RegistrarSaida(Convert.ToInt32(txtIdVeiculo.Text));
 
             // Exibindo horario de saída no TextBox
-            txtSaida.Text = Convert.ToString(horarioSaida);
+            txtDataSaida.Text = Convert.ToString(horarioSaida);
 
             // Busca a data que o veiculo estacionou
             DateTime diferencaEntradaSaida = Movimentacao.BuscarMovimentacaoIdVeiculo(Convert.ToInt32(txtIdVeiculo.Text));
@@ -80,14 +81,14 @@ namespace Estacionamento.Win
 
             // ex: Veiculo que estacionou por dias: dias:horas:minutos:segundos
             // ex: Veiculo que estacionou por horas: horas:minutos:segundos
-            if(Convert.ToString(horarioCobranca).Length < 10)
+            if (Convert.ToString(horarioCobranca).Length < 10)
             {
                 double horas = Convert.ToInt32(horarioCobranca.ToString().Substring(0, 2));
 
-                if(horas == 0)
+                if (horas == 0)
                 {
                     txtValor.Text = $"R$: 5,00";
-                    MessageBox.Show($"{horas}"); 
+                    MessageBox.Show($"{horas}");
                 }
                 else
                 {
@@ -119,13 +120,13 @@ namespace Estacionamento.Win
                 {
                     MessageBox.Show($"O veiculo pernaceu no estacionamento por {hora} horas.");
                 }
-            
+
                 txtValor.Text = $"R$: {valorEstacionado},00";
 
                 Movimentacao.RegistrarValor(Convert.ToInt32(txtIdVeiculo.Text), valorEstacionado);
             }
-            
-            
+
+
         }
 
         private void trintaminuts_Tick(object sender, EventArgs e)
@@ -135,7 +136,31 @@ namespace Estacionamento.Win
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void txtPlaca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPlaca_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVeiculo_Click(object sender, EventArgs e)
+        {
+            FrmVeiculo frmVeiculo = new();
+            frmVeiculo.Show();
+            this.Hide();
+        }
+
+        private void btnHistorico_Click(object sender, EventArgs e)
+        {
+            FrmHistorico frmHistorico = new();
+            frmHistorico.Show();
+            this.Hide();
         }
     }
 }

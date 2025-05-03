@@ -1,4 +1,5 @@
 ﻿using Estacionamento.Class;
+using Estacionamento.Desk;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,18 +23,32 @@ namespace Estacionamento.Win
         {
             int linha = 0;
             var listaDehistorico = Movimentacao.ListaDeHistorico();
-            
-            foreach(var historico in listaDehistorico)
+
+            foreach (var historico in listaDehistorico)
             {
                 dgvHistorico.Rows.Add();
                 dgvHistorico.Rows[linha].Cells[0].Value = historico.IdVeiculo;
                 dgvHistorico.Rows[linha].Cells[1].Value = historico.DataEntrada;
                 dgvHistorico.Rows[linha].Cells[2].Value = historico.DataSaida;
-                dgvHistorico.Rows[linha].Cells[3].Value = historico.Situacao == 0? "Finalizado" : "Estacionado";
+                dgvHistorico.Rows[linha].Cells[3].Value = historico.Situacao == 0 ? "Finalizado" : "Estacionado";
                 dgvHistorico.Rows[linha].Cells[4].Value = historico.Valor;
 
                 linha++;
             }
+        }
+
+        private void btnEntradaSaida_Click(object sender, EventArgs e)
+        {
+            FrmEntradaSaida frmEntradaSaida = new();
+            frmEntradaSaida.Show();
+            this.Hide();
+        }
+
+        private void btnVeiculo_Click(object sender, EventArgs e)
+        {
+            FrmVeiculo frmVeiculo = new();
+            frmVeiculo.Show();
+            this.Hide();
         }
     }
 }

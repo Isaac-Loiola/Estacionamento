@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHistorico));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             dgvHistorico = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
@@ -49,6 +50,8 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.Transparent;
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.Controls.Add(dgvHistorico);
             panel1.Location = new Point(124, 139);
             panel1.Name = "panel1";
@@ -59,17 +62,17 @@
             // 
             dgvHistorico.AllowUserToAddRows = false;
             dgvHistorico.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopCenter;
-            dgvHistorico.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            dgvHistorico.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvHistorico.BackgroundColor = Color.White;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvHistorico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvHistorico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvHistorico.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvHistorico.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
             dgvHistorico.Location = new Point(25, 26);
@@ -127,7 +130,10 @@
             // 
             // btnHistorico
             // 
+            btnHistorico.BackgroundImage = (Image)resources.GetObject("btnHistorico.BackgroundImage");
             btnHistorico.Enabled = false;
+            btnHistorico.FlatAppearance.BorderSize = 0;
+            btnHistorico.FlatStyle = FlatStyle.Flat;
             btnHistorico.Location = new Point(0, 506);
             btnHistorico.Name = "btnHistorico";
             btnHistorico.Size = new Size(75, 65);
@@ -136,23 +142,32 @@
             // 
             // btnVeiculo
             // 
+            btnVeiculo.BackgroundImage = (Image)resources.GetObject("btnVeiculo.BackgroundImage");
+            btnVeiculo.FlatAppearance.BorderSize = 0;
+            btnVeiculo.FlatStyle = FlatStyle.Flat;
             btnVeiculo.Location = new Point(0, 322);
             btnVeiculo.Name = "btnVeiculo";
             btnVeiculo.Size = new Size(75, 65);
             btnVeiculo.TabIndex = 10;
             btnVeiculo.UseVisualStyleBackColor = true;
+            btnVeiculo.Click += btnVeiculo_Click;
             // 
             // btnEntradaSaida
             // 
+            btnEntradaSaida.BackgroundImage = (Image)resources.GetObject("btnEntradaSaida.BackgroundImage");
+            btnEntradaSaida.FlatAppearance.BorderSize = 0;
+            btnEntradaSaida.FlatStyle = FlatStyle.Flat;
             btnEntradaSaida.Location = new Point(0, 134);
             btnEntradaSaida.Name = "btnEntradaSaida";
             btnEntradaSaida.Size = new Size(75, 65);
             btnEntradaSaida.TabIndex = 9;
             btnEntradaSaida.UseVisualStyleBackColor = true;
+            btnEntradaSaida.Click += btnEntradaSaida_Click;
             // 
             // panel4
             // 
             panel4.BackColor = Color.White;
+            panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(76, 0);
             panel4.Name = "panel4";
@@ -163,6 +178,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(1163, 676);
             Controls.Add(panel4);
             Controls.Add(panel3);

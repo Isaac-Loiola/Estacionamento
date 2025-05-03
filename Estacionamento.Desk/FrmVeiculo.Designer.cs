@@ -28,26 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVeiculo));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel3 = new Panel();
             dgvVeiculos = new DataGridView();
             clmPlaca = new DataGridViewTextBoxColumn();
             clmModelo = new DataGridViewTextBoxColumn();
             clmTipoVeiculo = new DataGridViewTextBoxColumn();
-            txtBuscar = new TextBox();
             panel1 = new Panel();
             btnHistorico = new Button();
             btnVeiculo = new Button();
             btnEntradaSaida = new Button();
             panel4 = new Panel();
+            pictureBox9 = new PictureBox();
+            txtBuscar = new TextBox();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvVeiculos).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             SuspendLayout();
             // 
             // panel3
             // 
+            panel3.BackColor = Color.Transparent;
+            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
             panel3.Controls.Add(dgvVeiculos);
             panel3.Location = new Point(124, 139);
             panel3.Name = "panel3";
@@ -58,17 +63,17 @@
             // 
             dgvVeiculos.AllowUserToAddRows = false;
             dgvVeiculos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopCenter;
-            dgvVeiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            dgvVeiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvVeiculos.BackgroundColor = Color.White;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvVeiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvVeiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvVeiculos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvVeiculos.Columns.AddRange(new DataGridViewColumn[] { clmPlaca, clmModelo, clmTipoVeiculo });
             dgvVeiculos.Location = new Point(25, 26);
@@ -99,17 +104,6 @@
             clmTipoVeiculo.ReadOnly = true;
             clmTipoVeiculo.Width = 320;
             // 
-            // txtBuscar
-            // 
-            txtBuscar.Location = new Point(895, 110);
-            txtBuscar.Name = "txtBuscar";
-            txtBuscar.PlaceholderText = "Buscar";
-            txtBuscar.Size = new Size(234, 23);
-            txtBuscar.TabIndex = 3;
-            txtBuscar.TextAlign = HorizontalAlignment.Center;
-            txtBuscar.TextChanged += txtBuscar_TextChanged;
-            txtBuscar.KeyDown += txtBuscar_KeyDown;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.White;
@@ -124,16 +118,21 @@
             // 
             // btnHistorico
             // 
-            btnHistorico.Enabled = false;
+            btnHistorico.BackgroundImage = (Image)resources.GetObject("btnHistorico.BackgroundImage");
+            btnHistorico.FlatAppearance.BorderSize = 0;
+            btnHistorico.FlatStyle = FlatStyle.Flat;
             btnHistorico.Location = new Point(0, 506);
             btnHistorico.Name = "btnHistorico";
             btnHistorico.Size = new Size(75, 65);
             btnHistorico.TabIndex = 11;
             btnHistorico.UseVisualStyleBackColor = true;
+            btnHistorico.Click += btnHistorico_Click;
             // 
             // btnVeiculo
             // 
-            btnVeiculo.Enabled = false;
+            btnVeiculo.BackgroundImage = (Image)resources.GetObject("btnVeiculo.BackgroundImage");
+            btnVeiculo.FlatAppearance.BorderSize = 0;
+            btnVeiculo.FlatStyle = FlatStyle.Flat;
             btnVeiculo.Location = new Point(0, 322);
             btnVeiculo.Name = "btnVeiculo";
             btnVeiculo.Size = new Size(75, 65);
@@ -142,29 +141,57 @@
             // 
             // btnEntradaSaida
             // 
+            btnEntradaSaida.BackgroundImage = (Image)resources.GetObject("btnEntradaSaida.BackgroundImage");
+            btnEntradaSaida.FlatAppearance.BorderSize = 0;
+            btnEntradaSaida.FlatStyle = FlatStyle.Flat;
             btnEntradaSaida.Location = new Point(0, 134);
             btnEntradaSaida.Name = "btnEntradaSaida";
             btnEntradaSaida.Size = new Size(75, 65);
             btnEntradaSaida.TabIndex = 9;
             btnEntradaSaida.UseVisualStyleBackColor = true;
+            btnEntradaSaida.Click += btnEntradaSaida_Click;
             // 
             // panel4
             // 
             panel4.BackColor = Color.White;
+            panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(76, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(1087, 57);
             panel4.TabIndex = 9;
             // 
+            // pictureBox9
+            // 
+            pictureBox9.Anchor = AnchorStyles.Left;
+            pictureBox9.BackColor = Color.Transparent;
+            pictureBox9.BackgroundImage = (Image)resources.GetObject("pictureBox9.BackgroundImage");
+            pictureBox9.Location = new Point(875, 83);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(254, 50);
+            pictureBox9.TabIndex = 16;
+            pictureBox9.TabStop = false;
+            // 
+            // txtBuscar
+            // 
+            txtBuscar.BorderStyle = BorderStyle.None;
+            txtBuscar.Location = new Point(890, 99);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.PlaceholderText = "Buscar";
+            txtBuscar.Size = new Size(223, 16);
+            txtBuscar.TabIndex = 17;
+            txtBuscar.TextAlign = HorizontalAlignment.Center;
+            txtBuscar.KeyDown += txtBuscar_KeyDown_1;
+            // 
             // FrmVeiculo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1163, 676);
+            Controls.Add(txtBuscar);
+            Controls.Add(pictureBox9);
             Controls.Add(panel4);
             Controls.Add(panel1);
-            Controls.Add(txtBuscar);
             Controls.Add(panel3);
             Name = "FrmVeiculo";
             StartPosition = FormStartPosition.CenterScreen;
@@ -173,6 +200,7 @@
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvVeiculos).EndInit();
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -183,11 +211,12 @@
         private DataGridViewTextBoxColumn clmPlaca;
         private DataGridViewTextBoxColumn clmModelo;
         private DataGridViewTextBoxColumn clmTipoVeiculo;
-        private TextBox txtBuscar;
         private Panel panel1;
         private Button btnHistorico;
         private Button btnVeiculo;
         private Button btnEntradaSaida;
         private Panel panel4;
+        private PictureBox pictureBox9;
+        private TextBox txtBuscar;
     }
 }
