@@ -80,41 +80,45 @@ namespace Estacionamento.Win
 
             // ex: Veiculo que estacionou por dias: dias:horas:minutos:segundos
             // ex: Veiculo que estacionou por horas: horas:minutos:segundos
-
             if(Convert.ToString(horarioCobranca).Length < 10)
             {
-                int horas = Convert.ToInt32(horarioCobranca.ToString().Substring(0, 1));
+                int horas = Convert.ToInt32(horarioCobranca.ToString().Substring(0, 2));
 
                 if(horas == 0)
                 {
                     txtValor.Text = $"R$: 5,00";
+                    MessageBox.Show($"{horas}"); 
                 }
                 else
                 {
+                    MessageBox.Show($"O veiculo pernaneceu estacionado por {horas} horas.");
                     horas *= 5;
+                    txtValor.Text = $"R$: {horas},00";
                 }
-                txtValor.Text = $"R$: {horas},00";
-            }
-
-            // Código para veiculos que passaram dias estacionados:
-
-            // Isolando o dia e hora do veiculo estacionado!
-            int dia = Convert.ToInt32(horarioCobranca.ToString().Substring(0, 1));
-            int hora = Convert.ToInt32(horarioCobranca.ToString().Substring(2, 2));
-
-            // Variavel que multiplica horarios e entrega valor a ser pago. (R$: 5,00 / hora)
-            int valorEstacionado = (dia * 24 * 5) + (hora * 5);
-
-            if (dia > 0)
-            {
-                MessageBox.Show($"O veiculo permaneceu no estacionamento por {dia} dia/s e {hora} horas.");
             }
             else
             {
-                MessageBox.Show($"O veiculo pernaceu no estacionamento por {hora} horas.");
+                // Código para veiculos que passaram dias estacionados:
+
+                // Isolando o dia e hora do veiculo estacionado!
+                int dia = Convert.ToInt32(horarioCobranca.ToString().Substring(0, 1));
+                int hora = Convert.ToInt32(horarioCobranca.ToString().Substring(2, 2));
+
+                // Variavel que multiplica horarios e entrega valor a ser pago. (R$: 5,00 / hora)
+                int valorEstacionado = (dia * 24 * 5) + (hora * 5);
+
+                if (dia > 0)
+                {
+                    MessageBox.Show($"O veiculo permaneceu no estacionamento por {dia} dia/s e {hora} horas.");
+                }
+                else
+                {
+                    MessageBox.Show($"O veiculo pernaceu no estacionamento por {hora} horas.");
+                }
+            
+                txtValor.Text = $"R$: {valorEstacionado},00";
             }
             
-            txtValor.Text = $"R$: {valorEstacionado},00";
             
         }
 
