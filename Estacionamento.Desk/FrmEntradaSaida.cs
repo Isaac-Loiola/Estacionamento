@@ -88,7 +88,7 @@ namespace Estacionamento.Win
                 if (horas == 0)
                 {
                     txtValor.Text = $"R$: 5,00";
-                    MessageBox.Show($"{horas}");
+                    Movimentacao.RegistrarValor(Convert.ToInt32(txtIdVeiculo.Text), 5);
                 }
                 else
                 {
