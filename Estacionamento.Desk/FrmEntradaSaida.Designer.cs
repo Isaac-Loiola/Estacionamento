@@ -375,10 +375,11 @@
             // txtIdVeiculo
             // 
             txtIdVeiculo.BackColor = SystemColors.Control;
-            txtIdVeiculo.Location = new Point(517, 22);
+            txtIdVeiculo.Location = new Point(531, 22);
             txtIdVeiculo.Name = "txtIdVeiculo";
-            txtIdVeiculo.Size = new Size(56, 23);
+            txtIdVeiculo.Size = new Size(42, 23);
             txtIdVeiculo.TabIndex = 3;
+            txtIdVeiculo.Visible = false;
             // 
             // label1
             // 
