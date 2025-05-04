@@ -23,7 +23,7 @@ namespace Estacionamento.Win
         {
             if (txtPlaca.Text != string.Empty && txtModelo.Text != string.Empty && cmbTipoVeiculo.Text != string.Empty)
             {
-                Veiculo veiculo = new(txtPlaca.Text, txtModelo.Text, this.cmbTipoVeiculo.SelectedIndex + 1);
+                Veiculo veiculo = new(txtPlaca.Text.ToUpper(), txtModelo.Text.ToUpper(), this.cmbTipoVeiculo.SelectedIndex + 1);
                 veiculo.Registrar();
 
                 Movimentacao movimentacao = new(veiculo.Id);
