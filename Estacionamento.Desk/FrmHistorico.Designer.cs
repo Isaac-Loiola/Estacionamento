@@ -63,11 +63,12 @@
             dgvHistorico.AllowUserToAddRows = false;
             dgvHistorico.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold);
             dgvHistorico.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvHistorico.BackgroundColor = Color.White;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;

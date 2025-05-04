@@ -64,11 +64,12 @@
             dgvVeiculos.AllowUserToAddRows = false;
             dgvVeiculos.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold);
             dgvVeiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvVeiculos.BackgroundColor = Color.White;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -175,10 +176,11 @@
             // txtBuscar
             // 
             txtBuscar.BorderStyle = BorderStyle.None;
+            txtBuscar.Font = new Font("Mont Heavy DEMO", 10F, FontStyle.Bold);
             txtBuscar.Location = new Point(890, 99);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar";
-            txtBuscar.Size = new Size(223, 16);
+            txtBuscar.Size = new Size(223, 19);
             txtBuscar.TabIndex = 17;
             txtBuscar.TextAlign = HorizontalAlignment.Center;
             txtBuscar.KeyDown += txtBuscar_KeyDown_1;
