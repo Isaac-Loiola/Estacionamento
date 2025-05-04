@@ -198,7 +198,7 @@
             Controls.Add(panel1);
             Name = "FrmHistorico";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FrmHistorico";
+            Text = "VagaFy";
             Load += FrmHistorico_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvHistorico).EndInit();
