@@ -21,11 +21,24 @@ namespace Estacionamento.Win
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Veiculo veiculo = new(txtPlaca.Text, txtModelo.Text, this.cmbTipoVeiculo.SelectedIndex + 1);
-            veiculo.Registrar();
+            if (txtPlaca.Text != string.Empty && txtModelo.Text != string.Empty && cmbTipoVeiculo.Text != string.Empty)
+            {
+                Veiculo veiculo = new(txtPlaca.Text, txtModelo.Text, this.cmbTipoVeiculo.SelectedIndex + 1);
+                veiculo.Registrar();
 
-            Movimentacao movimentacao = new(veiculo.Id);
-            movimentacao.RegistrarEntrada();
+                Movimentacao movimentacao = new(veiculo.Id);
+                movimentacao.RegistrarEntrada();
+
+                MessageBox.Show($"{txtModelo.Text} registrado.");
+
+                txtPlaca.Clear();
+                txtModelo.Clear();
+                cmbTipoVeiculo.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Todos campos devem ser preenchidos.");
+            }
 
         }
 
