@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVeiculo));
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             panel3 = new Panel();
             dgvVeiculos = new DataGridView();
             clmPlaca = new DataGridViewTextBoxColumn();
@@ -64,18 +64,18 @@
             // 
             dgvVeiculos.AllowUserToAddRows = false;
             dgvVeiculos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle5.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold);
-            dgvVeiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle7.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold);
+            dgvVeiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             dgvVeiculos.BackgroundColor = Color.White;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgvVeiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle8.BackColor = SystemColors.Control;
+            dataGridViewCellStyle8.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            dgvVeiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             dgvVeiculos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvVeiculos.Columns.AddRange(new DataGridViewColumn[] { clmPlaca, clmModelo, clmTipoVeiculo });
             dgvVeiculos.Location = new Point(25, 26);
@@ -208,6 +208,7 @@
             Controls.Add(panel4);
             Controls.Add(panel1);
             Controls.Add(panel3);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmVeiculo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "VagaFy";
