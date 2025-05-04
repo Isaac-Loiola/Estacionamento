@@ -78,66 +78,73 @@ namespace Estacionamento.Win
 
         private void btnSaida_Click(object sender, EventArgs e)
         {
-            // Registrando a saída e guardando na variavel.
-            DateTime horarioSaida = Movimentacao.RegistrarSaida(Convert.ToInt32(txtIdVeiculo.Text));
-
-            // Exibindo horario de saída no TextBox
-            txtDataSaida.Text = Convert.ToString(horarioSaida);
-
-            // Busca a data que o veiculo estacionou
-            DateTime diferencaEntradaSaida = Movimentacao.BuscarMovimentacaoIdVeiculo(Convert.ToInt32(txtIdVeiculo.Text));
-
-            // Subtraindo horario de entrada e saida para obter diferença de horario.
-            var horarioCobranca = (horarioSaida - diferencaEntradaSaida);
-
-            // Utilizando essa verificação porque caso o veiculo fique menos de um dia, o formato do TimesPan é diferente.
-
-            // ex: Veiculo que estacionou por dias: dias:horas:minutos:segundos
-            // ex: Veiculo que estacionou por horas: horas:minutos:segundos
-            if (Convert.ToString(horarioCobranca).Length < 10)
+            if(txtPlacaSaida.Text != string.Empty && txtModeloSaida.Text != string.Empty && txtDataEntrada.Text != string.Empty)
             {
-                double horas = Convert.ToInt32(horarioCobranca.ToString().Substring(0, 2));
+                // Registrando a saída e guardando na variavel.
+                DateTime horarioSaida = Movimentacao.RegistrarSaida(Convert.ToInt32(txtIdVeiculo.Text));
 
-                if (horas == 0)
+                // Exibindo horario de saída no TextBox
+                txtDataSaida.Text = Convert.ToString(horarioSaida);
+
+                // Busca a data que o veiculo estacionou
+                DateTime diferencaEntradaSaida = Movimentacao.BuscarMovimentacaoIdVeiculo(Convert.ToInt32(txtIdVeiculo.Text));
+
+                // Subtraindo horario de entrada e saida para obter diferença de horario.
+                var horarioCobranca = (horarioSaida - diferencaEntradaSaida);
+
+                // Utilizando essa verificação porque caso o veiculo fique menos de um dia, o formato do TimesPan é diferente.
+
+                // ex: Veiculo que estacionou por dias: dias:horas:minutos:segundos
+                // ex: Veiculo que estacionou por horas: horas:minutos:segundos
+                if (Convert.ToString(horarioCobranca).Length < 10)
                 {
-                    txtValor.Text = $"R$: 5,00";
-                    Movimentacao.RegistrarValor(Convert.ToInt32(txtIdVeiculo.Text), 5);
-                    MessageBox.Show($"O veiculo pernaneceu estacionado por menos de 1 hora.");
+                    double horas = Convert.ToInt32(horarioCobranca.ToString().Substring(0, 2));
 
+                    if (horas == 0)
+                    {
+                        txtValor.Text = $"R$: 5,00";
+                        Movimentacao.RegistrarValor(Convert.ToInt32(txtIdVeiculo.Text), 5);
+                        MessageBox.Show($"O veiculo pernaneceu estacionado por menos de 1 hora.");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show($"O veiculo pernaneceu estacionado por {horas} horas.");
+                        double valorEstacionado = horas * 5;
+
+                        Movimentacao.RegistrarValor(Convert.ToInt32(txtIdVeiculo.Text), valorEstacionado);
+
+                        txtValor.Text = $"R$: {valorEstacionado},00";
+                    }
                 }
                 else
                 {
-                    MessageBox.Show($"O veiculo pernaneceu estacionado por {horas} horas.");
-                    double valorEstacionado = horas * 5;
+                    // Código para veiculos que passaram dias estacionados:
 
-                    Movimentacao.RegistrarValor(Convert.ToInt32(txtIdVeiculo.Text), valorEstacionado);
+                    // Isolando o dia e hora do veiculo estacionado!
+                    int dia = Convert.ToInt32(horarioCobranca.ToString().Substring(0, 1));
+                    int hora = Convert.ToInt32(horarioCobranca.ToString().Substring(2, 2));
+
+                    // Variavel que multiplica horarios e entrega valor a ser pago. (R$: 5,00 / hora)
+                    double valorEstacionado = (dia * 24 * 5) + (hora * 5);
+
+                    if (dia > 0)
+                    {
+                        MessageBox.Show($"O veiculo permaneceu no estacionamento por {dia} dia/s e {hora} horas.");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"O veiculo pernaceu no estacionamento por {hora} horas.");
+                    }
 
                     txtValor.Text = $"R$: {valorEstacionado},00";
+
+                    Movimentacao.RegistrarValor(Convert.ToInt32(txtIdVeiculo.Text), valorEstacionado);
                 }
             }
             else
             {
-                // Código para veiculos que passaram dias estacionados:
-
-                // Isolando o dia e hora do veiculo estacionado!
-                int dia = Convert.ToInt32(horarioCobranca.ToString().Substring(0, 1));
-                int hora = Convert.ToInt32(horarioCobranca.ToString().Substring(2, 2));
-
-                // Variavel que multiplica horarios e entrega valor a ser pago. (R$: 5,00 / hora)
-                double valorEstacionado = (dia * 24 * 5) + (hora * 5);
-
-                if (dia > 0)
-                {
-                    MessageBox.Show($"O veiculo permaneceu no estacionamento por {dia} dia/s e {hora} horas.");
-                }
-                else
-                {
-                    MessageBox.Show($"O veiculo pernaceu no estacionamento por {hora} horas.");
-                }
-
-                txtValor.Text = $"R$: {valorEstacionado},00";
-
-                Movimentacao.RegistrarValor(Convert.ToInt32(txtIdVeiculo.Text), valorEstacionado);
+                MessageBox.Show("Busca necessária antes de registrar saida.");
             }
 
 
