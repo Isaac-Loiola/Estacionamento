@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVeiculo));
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel3 = new Panel();
             dgvVeiculos = new DataGridView();
             clmPlaca = new DataGridViewTextBoxColumn();
@@ -42,7 +42,7 @@
             btnEntradaSaida = new Button();
             panel4 = new Panel();
             pictureBox9 = new PictureBox();
-            txtBuscar = new TextBox();
+            txtBuscarVeiculo = new TextBox();
             label1 = new Label();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvVeiculos).BeginInit();
@@ -64,18 +64,18 @@
             // 
             dgvVeiculos.AllowUserToAddRows = false;
             dgvVeiculos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold);
-            dgvVeiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold);
+            dgvVeiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvVeiculos.BackgroundColor = Color.White;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle8.BackColor = SystemColors.Control;
-            dataGridViewCellStyle8.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dgvVeiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvVeiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvVeiculos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvVeiculos.Columns.AddRange(new DataGridViewColumn[] { clmPlaca, clmModelo, clmTipoVeiculo });
             dgvVeiculos.Location = new Point(25, 26);
@@ -175,17 +175,18 @@
             pictureBox9.TabIndex = 16;
             pictureBox9.TabStop = false;
             // 
-            // txtBuscar
+            // txtBuscarVeiculo
             // 
-            txtBuscar.BorderStyle = BorderStyle.None;
-            txtBuscar.Font = new Font("Mont Heavy DEMO", 10F, FontStyle.Bold);
-            txtBuscar.Location = new Point(890, 99);
-            txtBuscar.Name = "txtBuscar";
-            txtBuscar.PlaceholderText = "Buscar";
-            txtBuscar.Size = new Size(223, 19);
-            txtBuscar.TabIndex = 17;
-            txtBuscar.TextAlign = HorizontalAlignment.Center;
-            txtBuscar.KeyDown += txtBuscar_KeyDown_1;
+            txtBuscarVeiculo.BorderStyle = BorderStyle.None;
+            txtBuscarVeiculo.Font = new Font("Mont Heavy DEMO", 10F, FontStyle.Bold);
+            txtBuscarVeiculo.Location = new Point(890, 99);
+            txtBuscarVeiculo.Name = "txtBuscarVeiculo";
+            txtBuscarVeiculo.PlaceholderText = "Buscar";
+            txtBuscarVeiculo.Size = new Size(223, 19);
+            txtBuscarVeiculo.TabIndex = 17;
+            txtBuscarVeiculo.TextAlign = HorizontalAlignment.Center;
+            txtBuscarVeiculo.TextChanged += txtBuscar_TextChanged_1;
+            txtBuscarVeiculo.KeyDown += txtBuscar_KeyDown_1;
             // 
             // label1
             // 
@@ -203,7 +204,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1163, 676);
             Controls.Add(label1);
-            Controls.Add(txtBuscar);
+            Controls.Add(txtBuscarVeiculo);
             Controls.Add(pictureBox9);
             Controls.Add(panel4);
             Controls.Add(panel1);
@@ -213,6 +214,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "VagaFy";
             Load += CarsFast_Load;
+            KeyDown += FrmVeiculo_KeyDown;
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvVeiculos).EndInit();
             panel1.ResumeLayout(false);
@@ -233,7 +235,7 @@
         private Button btnEntradaSaida;
         private Panel panel4;
         private PictureBox pictureBox9;
-        private TextBox txtBuscar;
+        private TextBox txtBuscarVeiculo;
         private Label label1;
     }
 }

@@ -44,21 +44,40 @@ namespace Estacionamento.Desk
 
         private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
         {
+
+        }
+
+        private void txtBuscar_KeyDown_1(object sender, KeyEventArgs e)
+        {
             if (e.KeyCode == Keys.Enter)
             {
-                Veiculo veiculo = new();
-                var veiculoDeBusca = veiculo.BuscarPorPlaca(txtBuscar.Text);
                 dgvVeiculos.Rows.Clear();
+
+                Veiculo veiculo = new();
+                var veiculoDeBusca = veiculo.BuscarPorPlaca(txtBuscarVeiculo.Text);
+
 
                 dgvVeiculos.Rows.Add();
                 dgvVeiculos.Rows[0].Cells[0].Value = veiculoDeBusca.Placa;
                 dgvVeiculos.Rows[0].Cells[1].Value = veiculoDeBusca.Modelo;
                 dgvVeiculos.Rows[0].Cells[2].Value = veiculoDeBusca.TipoVeiculo == 1 ? "Carro" : "Moto";
             }
-        }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                int linha = 0;
 
-        private void txtBuscar_KeyDown_1(object sender, KeyEventArgs e)
-        {
+                var veiculos = Veiculo.ListarVeiculosEstacionados();
+
+                foreach (var lista in veiculos)
+                {
+                    dgvVeiculos.Rows.Add();
+                    dgvVeiculos.Rows[linha].Cells[0].Value = lista.Placa;
+                    dgvVeiculos.Rows[linha].Cells[1].Value = lista.Modelo;
+                    dgvVeiculos.Rows[linha].Cells[2].Value = lista.TipoVeiculo == 1 ? "Carro" : "Moto";
+
+                    linha++;
+                }
+            }
 
         }
 
@@ -79,6 +98,31 @@ namespace Estacionamento.Desk
         private void dgvVeiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtBuscar_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmVeiculo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Escape)
+            {
+                int linha = 0;
+
+                var veiculos = Veiculo.ListarVeiculosEstacionados();
+
+                foreach (var lista in veiculos)
+                {
+                    dgvVeiculos.Rows.Add();
+                    dgvVeiculos.Rows[linha].Cells[0].Value = lista.Placa;
+                    dgvVeiculos.Rows[linha].Cells[1].Value = lista.Modelo;
+                    dgvVeiculos.Rows[linha].Cells[2].Value = lista.TipoVeiculo == 1 ? "Carro" : "Moto";
+
+                    linha++;
+                }
+            }
         }
     }
 }
