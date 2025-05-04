@@ -184,6 +184,7 @@
             // lblPlaca
             // 
             lblPlaca.AutoSize = true;
+            lblPlaca.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPlaca.Location = new Point(140, 49);
             lblPlaca.Name = "lblPlaca";
             lblPlaca.Size = new Size(35, 15);
