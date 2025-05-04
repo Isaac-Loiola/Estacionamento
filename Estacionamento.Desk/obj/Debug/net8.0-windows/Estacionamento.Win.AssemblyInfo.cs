@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Estacionamento.Win")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c82e46cf96f040e7df9f675a54d76b518b0952e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a75c9c6e88faf99f8f2eb5325061c956d77d748")]
 [assembly: System.Reflection.AssemblyProductAttribute("Estacionamento.Win")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Estacionamento.Win")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

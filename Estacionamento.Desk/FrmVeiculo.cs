@@ -75,5 +75,10 @@ namespace Estacionamento.Desk
             frmHistorico.Show();
             this.Hide();
         }
+
+        private void dgvVeiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

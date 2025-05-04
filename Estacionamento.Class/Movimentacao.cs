@@ -81,7 +81,7 @@ namespace Estacionamento.Class
             List<Movimentacao> listaHistorico = new();
 
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"select id_veiculo, data_entrada, data_saida, situacao, valor from movimentacoes";
+            cmd.CommandText = $"select id_veiculo, data_entrada, data_saida, situacao, valor from movimentacoes where situacao = 0";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {

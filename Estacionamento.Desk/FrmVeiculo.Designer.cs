@@ -71,7 +71,7 @@
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
             dataGridViewCellStyle2.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvVeiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -83,6 +83,7 @@
             dgvVeiculos.RowHeadersVisible = false;
             dgvVeiculos.Size = new Size(962, 453);
             dgvVeiculos.TabIndex = 0;
+            dgvVeiculos.CellContentClick += dgvVeiculos_CellContentClick;
             // 
             // clmPlaca
             // 
