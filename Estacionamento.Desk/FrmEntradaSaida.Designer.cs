@@ -494,6 +494,7 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(1087, 57);
             panel4.TabIndex = 8;
+            panel4.Paint += panel4_Paint;
             // 
             // pictureBox9
             // 

@@ -89,6 +89,8 @@ namespace Estacionamento.Win
                 {
                     txtValor.Text = $"R$: 5,00";
                     Movimentacao.RegistrarValor(Convert.ToInt32(txtIdVeiculo.Text), 5);
+                    MessageBox.Show($"O veiculo pernaneceu estacionado por menos de 1 hora.");
+
                 }
                 else
                 {
@@ -98,7 +100,6 @@ namespace Estacionamento.Win
                     Movimentacao.RegistrarValor(Convert.ToInt32(txtIdVeiculo.Text), valorEstacionado);
 
                     txtValor.Text = $"R$: {valorEstacionado},00";
-
                 }
             }
             else
@@ -161,6 +162,11 @@ namespace Estacionamento.Win
             FrmHistorico frmHistorico = new();
             frmHistorico.Show();
             this.Hide();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
