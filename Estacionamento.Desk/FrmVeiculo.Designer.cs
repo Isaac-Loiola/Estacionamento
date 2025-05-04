@@ -43,6 +43,7 @@
             panel4 = new Panel();
             pictureBox9 = new PictureBox();
             txtBuscar = new TextBox();
+            label1 = new Label();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvVeiculos).BeginInit();
             panel1.SuspendLayout();
@@ -186,11 +187,22 @@
             txtBuscar.TextAlign = HorizontalAlignment.Center;
             txtBuscar.KeyDown += txtBuscar_KeyDown_1;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Mont Heavy DEMO", 15F, FontStyle.Bold);
+            label1.Location = new Point(124, 92);
+            label1.Name = "label1";
+            label1.Size = new Size(246, 28);
+            label1.TabIndex = 18;
+            label1.Text = "Veiculos Estacionados";
+            // 
             // FrmVeiculo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1163, 676);
+            Controls.Add(label1);
             Controls.Add(txtBuscar);
             Controls.Add(pictureBox9);
             Controls.Add(panel4);
@@ -221,5 +233,6 @@
         private Panel panel4;
         private PictureBox pictureBox9;
         private TextBox txtBuscar;
+        private Label label1;
     }
 }
