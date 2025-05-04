@@ -69,6 +69,7 @@ namespace Estacionamento.Win
                 txtIdVeiculo.Text = Convert.ToString((retorno.Id));
 
                 txtDataEntrada.Text = Convert.ToString(Movimentacao.BuscarMovimentacaoIdVeiculo(retorno.Id));
+
             }
         }
 
@@ -78,19 +79,21 @@ namespace Estacionamento.Win
 
         private void btnSaida_Click(object sender, EventArgs e)
         {
-            if(txtPlacaSaida.Text != string.Empty && txtModeloSaida.Text != string.Empty && txtDataEntrada.Text != string.Empty)
+            if (txtPlacaSaida.Text != string.Empty && txtModeloSaida.Text != string.Empty && txtDataEntrada.Text != string.Empty)
             {
                 // Registrando a saída e guardando na variavel.
                 DateTime horarioSaida = Movimentacao.RegistrarSaida(Convert.ToInt32(txtIdVeiculo.Text));
+                
+
 
                 // Exibindo horario de saída no TextBox
                 txtDataSaida.Text = Convert.ToString(horarioSaida);
 
                 // Busca a data que o veiculo estacionou
-                DateTime diferencaEntradaSaida = Movimentacao.BuscarMovimentacaoIdVeiculo(Convert.ToInt32(txtIdVeiculo.Text));
+                DateTime horarioEntrada = Movimentacao.BuscarMovimentacaoIdVeiculo(Convert.ToInt32(txtIdVeiculo.Text));
 
                 // Subtraindo horario de entrada e saida para obter diferença de horario.
-                var horarioCobranca = (horarioSaida - diferencaEntradaSaida);
+                var horarioCobranca = (horarioSaida - horarioEntrada);
 
                 // Utilizando essa verificação porque caso o veiculo fique menos de um dia, o formato do TimesPan é diferente.
 
@@ -185,6 +188,11 @@ namespace Estacionamento.Win
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
         {
 
         }

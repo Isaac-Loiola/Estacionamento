@@ -52,21 +52,22 @@ namespace Estacionamento.Class
 
         }
 
-        public  Veiculo BuscarPorPlaca(string placa)
+        public Veiculo BuscarPorPlaca(string placa)
         {
             Veiculo veiculo = new();
 
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"select placa, modelo, tipo_veiculo from veiculos where placa = '{placa}'";
+            cmd.CommandText = $"select * from veiculos where placa = '{placa}'";
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 veiculo = new
                 (
-                    Placa = dr.GetString(0),
-                    Modelo = dr.GetString(1),
-                    TipoVeiculo = dr.GetInt32(2) 
+                    Id = dr.GetInt32(0),
+                    Placa = dr.GetString(1),
+                    Modelo = dr.GetString(2),
+                    TipoVeiculo = dr.GetInt32(3) 
                 );
             }
 

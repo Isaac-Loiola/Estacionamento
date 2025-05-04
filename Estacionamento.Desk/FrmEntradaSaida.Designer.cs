@@ -375,11 +375,10 @@
             // txtIdVeiculo
             // 
             txtIdVeiculo.BackColor = SystemColors.Control;
-            txtIdVeiculo.Location = new Point(556, 22);
+            txtIdVeiculo.Location = new Point(517, 22);
             txtIdVeiculo.Name = "txtIdVeiculo";
-            txtIdVeiculo.Size = new Size(17, 23);
+            txtIdVeiculo.Size = new Size(56, 23);
             txtIdVeiculo.TabIndex = 3;
-            txtIdVeiculo.Visible = false;
             // 
             // label1
             // 
@@ -506,6 +505,7 @@
             pictureBox9.Size = new Size(254, 50);
             pictureBox9.TabIndex = 15;
             pictureBox9.TabStop = false;
+            pictureBox9.Click += pictureBox9_Click;
             // 
             // FrmEntradaSaida
             // 
