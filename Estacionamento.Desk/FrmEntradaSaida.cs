@@ -83,7 +83,6 @@ namespace Estacionamento.Win
             {
                 // Registrando a saída e guardando na variavel.
                 DateTime horarioSaida = Movimentacao.RegistrarSaida(Convert.ToInt32(txtIdVeiculo.Text));
-                
 
 
                 // Exibindo horario de saída no TextBox

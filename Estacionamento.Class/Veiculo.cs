@@ -67,7 +67,7 @@ namespace Estacionamento.Class
                     Id = dr.GetInt32(0),
                     Placa = dr.GetString(1),
                     Modelo = dr.GetString(2),
-                    TipoVeiculo = dr.GetInt32(3) 
+                    TipoVeiculo = dr.GetInt32(3)
                 );
             }
 
@@ -98,6 +98,27 @@ namespace Estacionamento.Class
             return veiculos;
         }
 
-       
+        public int VerificarVeiculoExistente(string placa)
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select id from veiculos where placa = {placa}";
+            int id = Convert.ToInt32(cmd.ExecuteScalar());
+
+            return id;
+        }
+
+        public void RegistrarVeiculoExistente()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"insert into veiculos(placa, modelo, tipo_veiculo) " +
+                              $"values('{Placa}', '{Modelo}', {TipoVeiculo})";
+            cmd.ExecuteNonQuery();
+
+            cmd.CommandText = "select id from veiculos order by id desc limit 1";
+            Id = Convert.ToInt32(cmd.ExecuteScalar());
+
+        }
     }
 }
