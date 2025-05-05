@@ -134,6 +134,7 @@
             // btnVeiculo
             // 
             btnVeiculo.BackgroundImage = (Image)resources.GetObject("btnVeiculo.BackgroundImage");
+            btnVeiculo.Enabled = false;
             btnVeiculo.FlatAppearance.BorderSize = 0;
             btnVeiculo.FlatStyle = FlatStyle.Flat;
             btnVeiculo.Location = new Point(0, 322);
