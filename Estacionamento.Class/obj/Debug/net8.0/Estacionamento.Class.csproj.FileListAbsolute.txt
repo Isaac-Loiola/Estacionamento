@@ -11,3 +11,16 @@ C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0
 C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\refint\Estacionamento.Class.dll
 C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.pdb
 C:\Users\ratoj\source\repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\ref\Estacionamento.Class.dll
+C:\Users\isaac.oloiola\Source\Repos\Estacionamento\Estacionamento.Class\bin\Debug\net8.0\Estacionamento.Class.deps.json
+C:\Users\isaac.oloiola\Source\Repos\Estacionamento\Estacionamento.Class\bin\Debug\net8.0\Estacionamento.Class.dll
+C:\Users\isaac.oloiola\Source\Repos\Estacionamento\Estacionamento.Class\bin\Debug\net8.0\Estacionamento.Class.pdb
+C:\Users\isaac.oloiola\Source\Repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.csproj.AssemblyReference.cache
+C:\Users\isaac.oloiola\Source\Repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isaac.oloiola\Source\Repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.AssemblyInfoInputs.cache
+C:\Users\isaac.oloiola\Source\Repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.AssemblyInfo.cs
+C:\Users\isaac.oloiola\Source\Repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.csproj.CoreCompileInputs.cache
+C:\Users\isaac.oloiola\Source\Repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.sourcelink.json
+C:\Users\isaac.oloiola\Source\Repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.dll
+C:\Users\isaac.oloiola\Source\Repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\refint\Estacionamento.Class.dll
+C:\Users\isaac.oloiola\Source\Repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\Estacionamento.Class.pdb
+C:\Users\isaac.oloiola\Source\Repos\Estacionamento\Estacionamento.Class\obj\Debug\net8.0\ref\Estacionamento.Class.dll

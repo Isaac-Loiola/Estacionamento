@@ -101,22 +101,22 @@
             // 
             cmbTipoVeiculo.BackColor = Color.FromArgb(230, 230, 230);
             cmbTipoVeiculo.FlatStyle = FlatStyle.Flat;
-            cmbTipoVeiculo.Font = new Font("Mont Heavy DEMO", 10F, FontStyle.Bold);
+            cmbTipoVeiculo.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             cmbTipoVeiculo.FormattingEnabled = true;
             cmbTipoVeiculo.Items.AddRange(new object[] { "Carro", "Moto" });
             cmbTipoVeiculo.Location = new Point(42, 338);
             cmbTipoVeiculo.Name = "cmbTipoVeiculo";
-            cmbTipoVeiculo.Size = new Size(235, 26);
+            cmbTipoVeiculo.Size = new Size(235, 24);
             cmbTipoVeiculo.TabIndex = 17;
             // 
             // txtModelo
             // 
             txtModelo.BackColor = Color.FromArgb(230, 230, 230);
             txtModelo.BorderStyle = BorderStyle.None;
-            txtModelo.Font = new Font("Mont Heavy DEMO", 10F, FontStyle.Bold);
+            txtModelo.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             txtModelo.Location = new Point(42, 210);
             txtModelo.Name = "txtModelo";
-            txtModelo.Size = new Size(235, 19);
+            txtModelo.Size = new Size(235, 16);
             txtModelo.TabIndex = 16;
             txtModelo.TextAlign = HorizontalAlignment.Center;
             // 
@@ -146,10 +146,10 @@
             // 
             txtPlaca.BackColor = Color.FromArgb(230, 230, 230);
             txtPlaca.BorderStyle = BorderStyle.None;
-            txtPlaca.Font = new Font("Mont Heavy DEMO", 10F, FontStyle.Bold);
+            txtPlaca.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             txtPlaca.Location = new Point(42, 84);
             txtPlaca.Name = "txtPlaca";
-            txtPlaca.Size = new Size(235, 19);
+            txtPlaca.Size = new Size(235, 16);
             txtPlaca.TabIndex = 13;
             txtPlaca.TextAlign = HorizontalAlignment.Center;
             // 
@@ -167,30 +167,30 @@
             // lblTipoVeiculo
             // 
             lblTipoVeiculo.AutoSize = true;
-            lblTipoVeiculo.Font = new Font("Mont Heavy DEMO", 12F, FontStyle.Bold);
+            lblTipoVeiculo.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             lblTipoVeiculo.Location = new Point(100, 301);
             lblTipoVeiculo.Name = "lblTipoVeiculo";
-            lblTipoVeiculo.Size = new Size(137, 22);
+            lblTipoVeiculo.Size = new Size(132, 20);
             lblTipoVeiculo.TabIndex = 11;
             lblTipoVeiculo.Text = "Tipo do Veiculo";
             // 
             // lblModelo
             // 
             lblModelo.AutoSize = true;
-            lblModelo.Font = new Font("Mont Heavy DEMO", 12F, FontStyle.Bold);
+            lblModelo.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             lblModelo.Location = new Point(131, 169);
             lblModelo.Name = "lblModelo";
-            lblModelo.Size = new Size(74, 22);
+            lblModelo.Size = new Size(67, 20);
             lblModelo.TabIndex = 10;
             lblModelo.Text = "Modelo";
             // 
             // lblPlaca
             // 
             lblPlaca.AutoSize = true;
-            lblPlaca.Font = new Font("Mont Heavy DEMO", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPlaca.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPlaca.Location = new Point(136, 42);
             lblPlaca.Name = "lblPlaca";
-            lblPlaca.Size = new Size(57, 22);
+            lblPlaca.Size = new Size(53, 20);
             lblPlaca.TabIndex = 9;
             lblPlaca.Text = "Placa";
             // 
@@ -224,10 +224,10 @@
             txtDataEntrada.BackColor = Color.FromArgb(230, 230, 230);
             txtDataEntrada.BorderStyle = BorderStyle.None;
             txtDataEntrada.Enabled = false;
-            txtDataEntrada.Font = new Font("Mont Heavy DEMO", 10F, FontStyle.Bold);
+            txtDataEntrada.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             txtDataEntrada.Location = new Point(30, 272);
             txtDataEntrada.Name = "txtDataEntrada";
-            txtDataEntrada.Size = new Size(219, 19);
+            txtDataEntrada.Size = new Size(219, 16);
             txtDataEntrada.TabIndex = 16;
             txtDataEntrada.TextAlign = HorizontalAlignment.Center;
             // 
@@ -236,10 +236,10 @@
             txtDataSaida.BackColor = Color.FromArgb(230, 230, 230);
             txtDataSaida.BorderStyle = BorderStyle.None;
             txtDataSaida.Enabled = false;
-            txtDataSaida.Font = new Font("Mont Heavy DEMO", 10F, FontStyle.Bold);
+            txtDataSaida.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             txtDataSaida.Location = new Point(335, 272);
             txtDataSaida.Name = "txtDataSaida";
-            txtDataSaida.Size = new Size(219, 19);
+            txtDataSaida.Size = new Size(219, 16);
             txtDataSaida.TabIndex = 16;
             txtDataSaida.TextAlign = HorizontalAlignment.Center;
             // 
@@ -248,10 +248,10 @@
             txtValor.BackColor = Color.FromArgb(230, 230, 230);
             txtValor.BorderStyle = BorderStyle.None;
             txtValor.Enabled = false;
-            txtValor.Font = new Font("Mont Heavy DEMO", 10F, FontStyle.Bold);
+            txtValor.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             txtValor.Location = new Point(181, 390);
             txtValor.Name = "txtValor";
-            txtValor.Size = new Size(219, 19);
+            txtValor.Size = new Size(219, 16);
             txtValor.TabIndex = 16;
             txtValor.TextAlign = HorizontalAlignment.Center;
             // 
@@ -259,10 +259,11 @@
             // 
             txtModeloSaida.BackColor = Color.FromArgb(230, 230, 230);
             txtModeloSaida.BorderStyle = BorderStyle.None;
-            txtModeloSaida.Font = new Font("Mont Heavy DEMO", 10F, FontStyle.Bold);
+            txtModeloSaida.Enabled = false;
+            txtModeloSaida.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             txtModeloSaida.Location = new Point(182, 158);
             txtModeloSaida.Name = "txtModeloSaida";
-            txtModeloSaida.Size = new Size(219, 19);
+            txtModeloSaida.Size = new Size(219, 16);
             txtModeloSaida.TabIndex = 16;
             txtModeloSaida.TextAlign = HorizontalAlignment.Center;
             // 
@@ -270,10 +271,11 @@
             // 
             txtPlacaSaida.BackColor = Color.FromArgb(230, 230, 230);
             txtPlacaSaida.BorderStyle = BorderStyle.None;
-            txtPlacaSaida.Font = new Font("Mont Heavy DEMO", 10F, FontStyle.Bold);
+            txtPlacaSaida.Enabled = false;
+            txtPlacaSaida.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             txtPlacaSaida.Location = new Point(182, 65);
             txtPlacaSaida.Name = "txtPlacaSaida";
-            txtPlacaSaida.Size = new Size(219, 19);
+            txtPlacaSaida.Size = new Size(219, 16);
             txtPlacaSaida.TabIndex = 16;
             txtPlacaSaida.TextAlign = HorizontalAlignment.Center;
             // 
@@ -335,40 +337,40 @@
             // lblvalor
             // 
             lblvalor.AutoSize = true;
-            lblvalor.Font = new Font("Mont Heavy DEMO", 12F, FontStyle.Bold);
+            lblvalor.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             lblvalor.Location = new Point(263, 347);
             lblvalor.Name = "lblvalor";
-            lblvalor.Size = new Size(55, 22);
+            lblvalor.Size = new Size(51, 20);
             lblvalor.TabIndex = 13;
             lblvalor.Text = "Valor";
             // 
             // lblDataSaida
             // 
             lblDataSaida.AutoSize = true;
-            lblDataSaida.Font = new Font("Mont Heavy DEMO", 12F, FontStyle.Bold);
+            lblDataSaida.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             lblDataSaida.Location = new Point(386, 233);
             lblDataSaida.Name = "lblDataSaida";
-            lblDataSaida.Size = new Size(126, 22);
+            lblDataSaida.Size = new Size(124, 20);
             lblDataSaida.TabIndex = 12;
             lblDataSaida.Text = "Data de Saida";
             // 
             // lblDataEntrada
             // 
             lblDataEntrada.AutoSize = true;
-            lblDataEntrada.Font = new Font("Mont Heavy DEMO", 12F, FontStyle.Bold);
+            lblDataEntrada.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             lblDataEntrada.Location = new Point(65, 233);
             lblDataEntrada.Name = "lblDataEntrada";
-            lblDataEntrada.Size = new Size(144, 22);
+            lblDataEntrada.Size = new Size(142, 20);
             lblDataEntrada.TabIndex = 11;
             lblDataEntrada.Text = "Data de Entrada";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Mont Heavy DEMO", 12F, FontStyle.Bold);
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             label2.Location = new Point(254, 116);
             label2.Name = "label2";
-            label2.Size = new Size(74, 22);
+            label2.Size = new Size(67, 20);
             label2.TabIndex = 10;
             label2.Text = "Modelo";
             // 
@@ -384,10 +386,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Mont Heavy DEMO", 12F, FontStyle.Bold);
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             label1.Location = new Point(263, 24);
             label1.Name = "label1";
-            label1.Size = new Size(57, 22);
+            label1.Size = new Size(53, 20);
             label1.TabIndex = 9;
             label1.Text = "Placa";
             // 
@@ -397,7 +399,7 @@
             btnRegistrar.BackgroundImage = (Image)resources.GetObject("btnRegistrar.BackgroundImage");
             btnRegistrar.FlatAppearance.BorderSize = 0;
             btnRegistrar.FlatStyle = FlatStyle.Flat;
-            btnRegistrar.Font = new Font("Mont Heavy DEMO", 11F, FontStyle.Bold);
+            btnRegistrar.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
             btnRegistrar.ForeColor = Color.White;
             btnRegistrar.Location = new Point(209, 577);
             btnRegistrar.Name = "btnRegistrar";
@@ -410,11 +412,11 @@
             // txtBuscar
             // 
             txtBuscar.BorderStyle = BorderStyle.None;
-            txtBuscar.Font = new Font("Mont Heavy DEMO", 10F, FontStyle.Bold);
+            txtBuscar.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
             txtBuscar.Location = new Point(892, 95);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar";
-            txtBuscar.Size = new Size(216, 19);
+            txtBuscar.Size = new Size(216, 16);
             txtBuscar.TabIndex = 5;
             txtBuscar.TextAlign = HorizontalAlignment.Center;
             txtBuscar.TextChanged += txtBuscar_TextChanged;
@@ -427,7 +429,7 @@
             btnSaida.BackgroundImage = (Image)resources.GetObject("btnSaida.BackgroundImage");
             btnSaida.FlatAppearance.BorderSize = 0;
             btnSaida.FlatStyle = FlatStyle.Flat;
-            btnSaida.Font = new Font("Mont Heavy DEMO", 11F, FontStyle.Bold);
+            btnSaida.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold);
             btnSaida.ForeColor = Color.White;
             btnSaida.Location = new Point(746, 577);
             btnSaida.Name = "btnSaida";

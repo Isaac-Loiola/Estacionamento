@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Win.csproj": {}
+    "C:\\Users\\isaac.oloiola\\Source\\Repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Win.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Class\\Estacionamento.Class.csproj": {
+    "C:\\Users\\isaac.oloiola\\Source\\Repos\\Estacionamento\\Estacionamento.Class\\Estacionamento.Class.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Class\\Estacionamento.Class.csproj",
+        "projectUniqueName": "C:\\Users\\isaac.oloiola\\Source\\Repos\\Estacionamento\\Estacionamento.Class\\Estacionamento.Class.csproj",
         "projectName": "Estacionamento.Class",
-        "projectPath": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Class\\Estacionamento.Class.csproj",
-        "packagesPath": "C:\\Users\\ratoj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Class\\obj\\",
+        "projectPath": "C:\\Users\\isaac.oloiola\\Source\\Repos\\Estacionamento\\Estacionamento.Class\\Estacionamento.Class.csproj",
+        "packagesPath": "C:\\Users\\isaac.oloiola\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\isaac.oloiola\\Source\\Repos\\Estacionamento\\Estacionamento.Class\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ratoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\isaac.oloiola\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -76,20 +75,20 @@
         }
       }
     },
-    "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Win.csproj": {
+    "C:\\Users\\isaac.oloiola\\Source\\Repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Win.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Win.csproj",
+        "projectUniqueName": "C:\\Users\\isaac.oloiola\\Source\\Repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Win.csproj",
         "projectName": "Estacionamento.Win",
-        "projectPath": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Win.csproj",
-        "packagesPath": "C:\\Users\\ratoj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Desk\\obj\\",
+        "projectPath": "C:\\Users\\isaac.oloiola\\Source\\Repos\\Estacionamento\\Estacionamento.Desk\\Estacionamento.Win.csproj",
+        "packagesPath": "C:\\Users\\isaac.oloiola\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\isaac.oloiola\\Source\\Repos\\Estacionamento\\Estacionamento.Desk\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ratoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\isaac.oloiola\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -98,15 +97,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Class\\Estacionamento.Class.csproj": {
-                "projectPath": "C:\\Users\\ratoj\\source\\repos\\Estacionamento\\Estacionamento.Class\\Estacionamento.Class.csproj"
+              "C:\\Users\\isaac.oloiola\\Source\\Repos\\Estacionamento\\Estacionamento.Class\\Estacionamento.Class.csproj": {
+                "projectPath": "C:\\Users\\isaac.oloiola\\Source\\Repos\\Estacionamento\\Estacionamento.Class\\Estacionamento.Class.csproj"
               }
             }
           }
